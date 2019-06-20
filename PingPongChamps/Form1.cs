@@ -37,12 +37,12 @@ namespace PingPongChamps
 
 
 
-        private void Randomize()
+        private void Randomize(int max)
         {
             int randomdef()
             {
                 int min = 0;
-                int max = 6;
+                
                 Random Rando = new Random();
                 return Rando.Next(min, max);
             }
@@ -63,11 +63,11 @@ namespace PingPongChamps
 
                     break;
                 case 3:
-                    topRow[0] = new XorGate(EndGate, 0);
+                    topRow[0] = new Nand(EndGate, 0);
 
                     break;
                 case 4:
-                    topRow[0] = new Nand(EndGate, 0);
+                    topRow[0] = new XorGate(EndGate, 0);
 
                     break;
                 case 5:
@@ -153,8 +153,22 @@ namespace PingPongChamps
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            int al = 0;
+            switch (StartGame.Difficulty)
+            {
+                case "Level 1 - Or, And.":
+                    al = 2;
+                    break;
+                case "Level 2 - Nor, Nand.":
+                    al = 4;
+                    break;
+                case "Level 3 - Xnor, Xor.":
+                    al = 6;
+                    break;
 
-            Randomize();
+            }
+
+            Randomize(al);
 
 
 

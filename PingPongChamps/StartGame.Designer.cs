@@ -57,6 +57,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(184, 79);
             this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -80,6 +81,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StartGame";
             this.Text = "StartGame";
+            this.Load += new System.EventHandler(this.StartGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

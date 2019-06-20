@@ -12,6 +12,7 @@ namespace PingPongChamps
 {
     public partial class StartGame : Form
     {
+        public static string Difficulty;
         public StartGame()
         {
             InitializeComponent();
@@ -21,10 +22,21 @@ namespace PingPongChamps
         {
             Form f = new Form1();
             f.ShowDialog();
-            
-        }
+            string d = listBox1.GetItemText(listBox1.SelectedItem);
+            Difficulty = d;
+    }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StartGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
