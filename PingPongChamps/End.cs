@@ -16,6 +16,11 @@ namespace PingPongChamps
         public override void ToggleLine(bool on, int wire)
         {
             this.inputs[wire] = on;
+            if (on)
+            {
+                
+                
+            }
             //end game here - code not yet placed
         }
     }

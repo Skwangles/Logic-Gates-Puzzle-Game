@@ -12,6 +12,7 @@ namespace PingPongChamps
 {
     public partial class StartGame : Form
     {
+        Form o = new Explain();
         public static string Difficulty;
         public StartGame()
         {
@@ -22,10 +23,11 @@ namespace PingPongChamps
         {
             if (listBox1.SelectedItem == null)
             {
-                MessageBox.Show("Please select a Difficulty", "Level not selected", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please select a Difficulty", "Level not selected", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
             else
             {
+                             
                 Form f = new Form1();
                 f.ShowDialog();
                 string d = listBox1.GetItemText(listBox1.SelectedItem);
@@ -47,6 +49,12 @@ namespace PingPongChamps
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ExplainsLGbtn_Click(object sender, EventArgs e)
+        {
+            
+            o.ShowDialog();
         }
     }
 }

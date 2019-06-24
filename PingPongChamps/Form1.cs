@@ -12,14 +12,14 @@ namespace PingPongChamps
 {
     public partial class Form1 : Form
     {
-        bool ison1 = false;
-        bool ison2 = false;
-        bool ison3 = false;
-        bool ison4 = false;
-        bool ison5 = false;
-        bool ison6 = false;
-        bool ison7 = false;
-        bool ison8 = false;
+        bool ison1 = true;
+        bool ison2 = true;
+        bool ison3 = true;
+        bool ison4 = true;
+        bool ison5 = true;
+        bool ison6 = true;
+        bool ison7 = true;
+        bool ison8 = true;
         Gate[] bottomRow = new Gate[4];
         Gate[] middleRow = new Gate[2];
         Gate[] topRow = new Gate[1];
@@ -150,9 +150,20 @@ namespace PingPongChamps
                 else { a++; }
             }
         }
+        private void WinCondition()
+        {
+            WinBlocker.BringToFront();
+            WinBlocker.BackColor = Color.Black;
+            label1.BringToFront();
+            label1.Text = "You Win!";
+
+        }
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
+          
             int al = 0;
             switch (StartGame.Difficulty)
             {
@@ -180,11 +191,16 @@ namespace PingPongChamps
             {
                 bottomRow[0].ToggleLine(true, 0);
                 ison1 = false;
+                btn1.Text = "On";
+                btn1.BackColor = Color.Blue;
+
             }
             else
             {
                 bottomRow[0].ToggleLine(false, 0);
                 ison1 = true;
+                btn1.Text = "Off";
+                btn1.BackColor = Color.Red;
             }
         }
 
@@ -194,11 +210,15 @@ namespace PingPongChamps
             {
                 bottomRow[0].ToggleLine(true, 1);
                 ison2 = false;
+                btn2.Text = "On";
+                btn2.BackColor = Color.Blue;
             }
             else
             {
                 bottomRow[0].ToggleLine(false, 1);
                 ison2 = true;
+                btn2.Text = "Off";
+                btn2.BackColor = Color.Red;
             }
         }
 
@@ -208,11 +228,15 @@ namespace PingPongChamps
             {
                 bottomRow[1].ToggleLine(true, 0);
                 ison3 = false;
+                btn3.Text = "On";
+                btn3.BackColor = Color.Blue;
             }
             else
             {
                 bottomRow[1].ToggleLine(false, 0);
                 ison3 = true;
+                btn3.Text = "Off";
+                btn3.BackColor = Color.Red;
             }
         }
 
@@ -222,11 +246,15 @@ namespace PingPongChamps
             {
                 bottomRow[1].ToggleLine(true, 1);
                 ison4 = false;
+                btn4.Text = "On";
+                btn4.BackColor = Color.Blue;
             }
             else
             {
                 bottomRow[1].ToggleLine(false, 1);
                 ison4 = true;
+                btn4.Text = "Off";
+                btn4.BackColor = Color.Red;
             }
         }
 
@@ -236,11 +264,15 @@ namespace PingPongChamps
             {
                 bottomRow[2].ToggleLine(true, 0);
                 ison5 = false;
+                btn5.Text = "On";
+                btn5.BackColor = Color.Blue;
             }
             else
             {
                 bottomRow[2].ToggleLine(false, 0);
                 ison5 = true;
+                btn5.Text = "Off";
+                btn5.BackColor = Color.Red;
             }
         }
 
@@ -250,11 +282,15 @@ namespace PingPongChamps
             {
                 bottomRow[2].ToggleLine(true, 1);
                 ison6 = false;
+                btn6.Text = "On";
+                btn6.BackColor = Color.Blue;
             }
             else
             {
                 bottomRow[2].ToggleLine(false, 1);
                 ison6 = true;
+                btn6.Text = "Off";
+                btn6.BackColor = Color.Red;
             }
         }
 
@@ -264,11 +300,15 @@ namespace PingPongChamps
             {
                 bottomRow[3].ToggleLine(true, 0);
                 ison7 = false;
+                btn7.Text = "On";
+                btn7.BackColor = Color.Blue;
             }
             else
             {
                 bottomRow[3].ToggleLine(false, 0);
                 ison7 = true;
+                btn7.Text = "Off";
+                btn7.BackColor = Color.Red;
             }
         }
 
@@ -278,12 +318,56 @@ namespace PingPongChamps
             {
                 bottomRow[3].ToggleLine(true, 1);
                 ison8 = false;
+                btn8.Text = "On";
+                btn8.BackColor = Color.Blue;
             }
             else
             {
                 bottomRow[3].ToggleLine(false, 1);
                 ison8 = true;
+                btn8.Text = "Off";
+                btn8.BackColor = Color.Red;
             }
+        }
+
+        private void btn1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, btn1.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void btn2_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, btn2.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void btn3_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, btn3.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void btn4_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, btn4.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void btn5_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, btn5.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void btn6_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, btn6.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void btn7_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, btn7.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void btn8_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, btn8.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
         }
     }
 }

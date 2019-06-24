@@ -36,6 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -115,11 +116,22 @@
             this.label8.Text = "Outputs ON if either, both inputs are on,\r\n or none.\r\n";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(25, 89);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(167, 26);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Warning: Will close on Game start\r\n\r\n";
+            // 
             // Explain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 384);
+            this.ClientSize = new System.Drawing.Size(308, 394);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
     }
 }
