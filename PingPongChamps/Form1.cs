@@ -24,10 +24,10 @@ namespace PingPongChamps
         Gate[] bottomRow = new Gate[4];
         Gate[] middleRow = new Gate[2];
         Gate[] topRow = new Gate[1];
-        End EndGate = new End(null, 0 );//trying to pass current open instance
+        End EndGate;//trying to pass current open instance
         public Form1()
         {
-            
+            EndGate = new End(this);
             InitializeComponent();
         }
 
@@ -35,122 +35,144 @@ namespace PingPongChamps
         {
 
         }
-
-
-
-
-        private void Randomize(int max)
-        {
-            int randomdef()
+        int randomdef(int max)
             {
                 int min = 0;
-                
+
                 Random Rando = new Random();
                 return Rando.Next(min, max);
             }
+
+        private void Randomize(int max)
+        {
+            
+
             //outwire is if the outline is the left or right input of the above gate (0 or 1)
             //gatename(first val,outwirenum): first val is the name of the gate above that gate, the one it reports to
             //for the starting buttons, when one is pressed it just activates its connected gates toggle line and corrosponding wire num. if it is the 0 wire, or 1 wire.
-            switch (randomdef())
+            switch (randomdef(max))
             {
                 case 0:
                     topRow[0] = new AndGate(EndGate, 0);
+                    topRow[0].Text = "And";
                     break;
                 case 1:
                     topRow[0] = new OrGate(EndGate, 0);
-
+                    topRow[0].Text = "Or";
                     break;
                 case 2:
                     topRow[0] = new NorGate(EndGate, 0);
-
+                    topRow[0].Text = "Nor";
                     break;
                 case 3:
                     topRow[0] = new Nand(EndGate, 0);
-
+                    topRow[0].Text = "Nand";
                     break;
                 case 4:
                     topRow[0] = new XorGate(EndGate, 0);
-
+                    topRow[0].Text = "Xor";
                     break;
                 case 5:
                     topRow[0] = new XnorGate(EndGate, 0);
-
+                    topRow[0].Text = "Xnor";
                     break;
                 default:
                     break;
             }
+
+            this.Controls.Add(topRow[0]);
+            topRow[0].Location = new Point(Form.ActiveForm.Width/2-20, 50);
+
+            topRow[0].BringToFront();
             //randomizes which things are where
             int a = 0;
             for (int i = 0; i < middleRow.Length; i++)
             {
 
-                switch (randomdef())
+                switch (randomdef(max))
                 {
                     case 0:
                         middleRow[i] = new AndGate(topRow[0], a);
+                        middleRow[i].Text = "And";
                         break;
                     case 1:
                         middleRow[i] = new OrGate(topRow[0], a);
-
+                        middleRow[i].Text = "Or";
                         break;
                     case 2:
                         middleRow[i] = new NorGate(topRow[0], a);
-
+                        middleRow[i].Text = "Nor";
                         break;
                     case 3:
                         middleRow[i] = new XorGate(topRow[0], a);
-
+                        middleRow[i].Text = "Xor";
                         break;
                     case 4:
                         middleRow[i] = new Nand(topRow[0], a);
-
+                        middleRow[i].Text = "Nand";
                         break;
                     case 5:
                         middleRow[i] = new XnorGate(topRow[0], a);
-
+                        middleRow[i].Text = "Xnor";
                         break;
                     default:
                         break;
                 }
                 if (a > 0) a = 0;
                 else { a++; }
+
+                this.Controls.Add(middleRow[i]);
+                
+               
+                middleRow[i].BringToFront();
             }
+            middleRow[0].Location = new Point(50, 200);
+            middleRow[1].Location = new Point(100, 200);
             a = 0;
             for (int i = 0; i < bottomRow.Length; i++)
             {
                 //need to implement counter to set each new rounds above gate in middle row/ check if the i-a thing is working
                 int b = (i % 1 == 0 ? i / 2 : i / 2 - 1);
-                switch (randomdef())
+                switch (randomdef(max))
                 {
                     case 0:
                         bottomRow[i] = new AndGate(middleRow[b], a);
+                        bottomRow[i].Text = "And";
                         break;
                     case 1:
                         bottomRow[i] = new OrGate(middleRow[b], a);
-
+                        bottomRow[i].Text = "Or";
                         break;
                     case 2:
                         bottomRow[i] = new NorGate(middleRow[b], a);
-
+                        bottomRow[i].Text = "Nor";
                         break;
                     case 3:
                         bottomRow[i] = new XorGate(middleRow[b], a);
-
+                        bottomRow[i].Text = "Xor";
                         break;
                     case 4:
                         bottomRow[i] = new Nand(middleRow[b], a);
-
+                        bottomRow[i].Text = "Nand";
                         break;
                     case 5:
                         bottomRow[i] = new XnorGate(middleRow[b], a);
-
+                        bottomRow[i].Text = "Xnor";
                         break;
                     default:
                         break;
                 }
                 if (a > 0) a = 0;
                 else { a++; }
+                this.Controls.Add(bottomRow[i]);
+                
+
+                bottomRow[i].BringToFront();
             }
+            bottomRow[0].Location = new Point(25, 250);
+            bottomRow[1].Location = new Point((1 + 1) * 53+10, 250);
+            bottomRow[2].Location = new Point((2 + 1) * 62, 250);
+            bottomRow[3].Location = new Point((3 + 1) * 70, 250);
         }
         public void WinCondition()
         {
@@ -167,7 +189,7 @@ namespace PingPongChamps
         private void Form1_Load(object sender, EventArgs e)
         {
           
-            int al = 0;
+            int al = 0;//Need to fix difficulty issues with, wrong difficulty given.
             switch (StartGame.Difficulty)
             {
                 case "Level 1 - Or, And.":
@@ -371,6 +393,11 @@ namespace PingPongChamps
         private void btn8_Paint(object sender, PaintEventArgs e)
         {
             ControlPaint.DrawBorder(e.Graphics, btn8.ClientRectangle, Color.Red, ButtonBorderStyle.Solid);
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

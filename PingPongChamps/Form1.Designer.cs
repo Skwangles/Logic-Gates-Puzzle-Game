@@ -38,7 +38,21 @@
             this.btn8 = new System.Windows.Forms.Button();
             this.WinBlocker = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Bottom0pb = new System.Windows.Forms.PictureBox();
+            this.Bottom3pb = new System.Windows.Forms.PictureBox();
+            this.Bottom2pb = new System.Windows.Forms.PictureBox();
+            this.Bottom1pb = new System.Windows.Forms.PictureBox();
+            this.Middle0pb = new System.Windows.Forms.PictureBox();
+            this.Middle1pb = new System.Windows.Forms.PictureBox();
+            this.Top0pb = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.WinBlocker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom0pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom3pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom2pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom1pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Middle0pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Middle1pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top0pb)).BeginInit();
             this.SuspendLayout();
             // 
             // btn1
@@ -47,7 +61,7 @@
             this.btn1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn1.Location = new System.Drawing.Point(12, 557);
+            this.btn1.Location = new System.Drawing.Point(12, 306);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(30, 23);
             this.btn1.TabIndex = 0;
@@ -62,7 +76,7 @@
             this.btn6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btn6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn6.Location = new System.Drawing.Point(210, 557);
+            this.btn6.Location = new System.Drawing.Point(210, 306);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(30, 23);
             this.btn6.TabIndex = 1;
@@ -77,7 +91,7 @@
             this.btn5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btn5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn5.Location = new System.Drawing.Point(174, 557);
+            this.btn5.Location = new System.Drawing.Point(174, 306);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(30, 23);
             this.btn5.TabIndex = 2;
@@ -92,7 +106,7 @@
             this.btn3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn3.Location = new System.Drawing.Point(93, 557);
+            this.btn3.Location = new System.Drawing.Point(93, 306);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(30, 23);
             this.btn3.TabIndex = 3;
@@ -107,7 +121,7 @@
             this.btn7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btn7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn7.Location = new System.Drawing.Point(255, 557);
+            this.btn7.Location = new System.Drawing.Point(254, 306);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(30, 23);
             this.btn7.TabIndex = 4;
@@ -122,7 +136,7 @@
             this.btn2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn2.Location = new System.Drawing.Point(48, 557);
+            this.btn2.Location = new System.Drawing.Point(48, 306);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(30, 23);
             this.btn2.TabIndex = 5;
@@ -137,7 +151,7 @@
             this.btn4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btn4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn4.Location = new System.Drawing.Point(129, 557);
+            this.btn4.Location = new System.Drawing.Point(129, 306);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(30, 23);
             this.btn4.TabIndex = 6;
@@ -152,7 +166,7 @@
             this.btn8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btn8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
             this.btn8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn8.Location = new System.Drawing.Point(291, 557);
+            this.btn8.Location = new System.Drawing.Point(291, 306);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(30, 23);
             this.btn8.TabIndex = 7;
@@ -181,11 +195,75 @@
             this.label1.Size = new System.Drawing.Size(0, 76);
             this.label1.TabIndex = 9;
             // 
+            // Bottom0pb
+            // 
+            this.Bottom0pb.Location = new System.Drawing.Point(23, 240);
+            this.Bottom0pb.Name = "Bottom0pb";
+            this.Bottom0pb.Size = new System.Drawing.Size(55, 37);
+            this.Bottom0pb.TabIndex = 10;
+            this.Bottom0pb.TabStop = false;
+            // 
+            // Bottom3pb
+            // 
+            this.Bottom3pb.Location = new System.Drawing.Point(256, 240);
+            this.Bottom3pb.Name = "Bottom3pb";
+            this.Bottom3pb.Size = new System.Drawing.Size(55, 37);
+            this.Bottom3pb.TabIndex = 11;
+            this.Bottom3pb.TabStop = false;
+            // 
+            // Bottom2pb
+            // 
+            this.Bottom2pb.Location = new System.Drawing.Point(185, 240);
+            this.Bottom2pb.Name = "Bottom2pb";
+            this.Bottom2pb.Size = new System.Drawing.Size(55, 37);
+            this.Bottom2pb.TabIndex = 12;
+            this.Bottom2pb.TabStop = false;
+            // 
+            // Bottom1pb
+            // 
+            this.Bottom1pb.Location = new System.Drawing.Point(93, 240);
+            this.Bottom1pb.Name = "Bottom1pb";
+            this.Bottom1pb.Size = new System.Drawing.Size(55, 37);
+            this.Bottom1pb.TabIndex = 13;
+            this.Bottom1pb.TabStop = false;
+            // 
+            // Middle0pb
+            // 
+            this.Middle0pb.Location = new System.Drawing.Point(23, 170);
+            this.Middle0pb.Name = "Middle0pb";
+            this.Middle0pb.Size = new System.Drawing.Size(125, 37);
+            this.Middle0pb.TabIndex = 14;
+            this.Middle0pb.TabStop = false;
+            // 
+            // Middle1pb
+            // 
+            this.Middle1pb.Location = new System.Drawing.Point(185, 170);
+            this.Middle1pb.Name = "Middle1pb";
+            this.Middle1pb.Size = new System.Drawing.Size(124, 37);
+            this.Middle1pb.TabIndex = 15;
+            this.Middle1pb.TabStop = false;
+            // 
+            // Top0pb
+            // 
+            this.Top0pb.Location = new System.Drawing.Point(93, 105);
+            this.Top0pb.Name = "Top0pb";
+            this.Top0pb.Size = new System.Drawing.Size(147, 37);
+            this.Top0pb.TabIndex = 16;
+            this.Top0pb.TabStop = false;
+            this.Top0pb.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 592);
+            this.ClientSize = new System.Drawing.Size(323, 344);
+            this.Controls.Add(this.Top0pb);
+            this.Controls.Add(this.Middle1pb);
+            this.Controls.Add(this.Middle0pb);
+            this.Controls.Add(this.Bottom1pb);
+            this.Controls.Add(this.Bottom2pb);
+            this.Controls.Add(this.Bottom3pb);
+            this.Controls.Add(this.Bottom0pb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn4);
@@ -201,6 +279,13 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WinBlocker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom0pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom3pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom2pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Bottom1pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Middle0pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Middle1pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Top0pb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,6 +303,13 @@
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.PictureBox WinBlocker;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox Bottom0pb;
+        private System.Windows.Forms.PictureBox Bottom3pb;
+        private System.Windows.Forms.PictureBox Bottom2pb;
+        private System.Windows.Forms.PictureBox Bottom1pb;
+        private System.Windows.Forms.PictureBox Middle0pb;
+        private System.Windows.Forms.PictureBox Middle1pb;
+        private System.Windows.Forms.PictureBox Top0pb;
     }
 }
 

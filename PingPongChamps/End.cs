@@ -8,10 +8,11 @@ namespace PingPongChamps
 {
     class End : Gate
     {
-        public static int A;
-        public End(Gate next, int outWireNum) : base(next, outWireNum, 2)
+        private Form1 form1;
+       
+        public End(Form1 form1) : base(null, 0, 2)
         {
-            
+            this.form1 = form1;
         }
 
         public override void ToggleLine(bool on, int wire)
@@ -19,8 +20,8 @@ namespace PingPongChamps
             this.inputs[wire] = on;
             if (on)
             {
-               //needs current open form1 instance to call .wincondition
-                
+                //needs current open form1 instance to call .wincondition
+                form1.WinCondition();
             }
             else
             {

@@ -33,6 +33,7 @@ namespace PingPongChamps
                 f.ShowDialog();
                 string d = listBox1.GetItemText(listBox1.SelectedItem);
                 Difficulty = d;
+                
             }
           
     }

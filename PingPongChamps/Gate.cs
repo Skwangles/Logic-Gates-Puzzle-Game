@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace PingPongChamps
 {
-    abstract class Gate
+    abstract class Gate : Label 
     {
         public Gate(Gate next, int outWireNum, int numWires) {
             this.next = next;
@@ -20,5 +20,7 @@ namespace PingPongChamps
         public bool[] inputs;
 
         public abstract void ToggleLine(bool on, int wire);
+
+       
     }
 }
