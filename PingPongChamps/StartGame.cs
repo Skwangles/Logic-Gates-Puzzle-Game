@@ -29,6 +29,7 @@ namespace PingPongChamps
             {
                              
                 Form f = new Form1();
+                
                 f.ShowDialog();
                 string d = listBox1.GetItemText(listBox1.SelectedItem);
                 Difficulty = d;

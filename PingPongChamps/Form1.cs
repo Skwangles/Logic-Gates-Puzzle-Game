@@ -20,12 +20,14 @@ namespace PingPongChamps
         bool ison6 = true;
         bool ison7 = true;
         bool ison8 = true;
+        
         Gate[] bottomRow = new Gate[4];
         Gate[] middleRow = new Gate[2];
         Gate[] topRow = new Gate[1];
-        End EndGate = new End(null, 0);
+        End EndGate = new End(null, 0 );//trying to pass current open instance
         public Form1()
         {
+            
             InitializeComponent();
         }
 
@@ -150,8 +152,9 @@ namespace PingPongChamps
                 else { a++; }
             }
         }
-        private void WinCondition()
+        public void WinCondition()
         {
+            
             WinBlocker.BringToFront();
             WinBlocker.BackColor = Color.Black;
             label1.BringToFront();
