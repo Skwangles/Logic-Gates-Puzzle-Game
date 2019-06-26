@@ -20,7 +20,7 @@ namespace PingPongChamps
         bool ison6 = true;
         bool ison7 = true;
         bool ison8 = true;
-        
+        Random Rando = new Random();
         Gate[] bottomRow = new Gate[4];
         Gate[] middleRow = new Gate[2];
         Gate[] topRow = new Gate[1];
@@ -35,22 +35,16 @@ namespace PingPongChamps
         {
 
         }
-        int randomdef(int max)
-            {
-                int min = 0;
-
-                Random Rando = new Random();
-                return Rando.Next(min, max);
-            }
+       
 
         private void Randomize(int max)
         {
-            
+            int min = 0;
 
             //outwire is if the outline is the left or right input of the above gate (0 or 1)
             //gatename(first val,outwirenum): first val is the name of the gate above that gate, the one it reports to
             //for the starting buttons, when one is pressed it just activates its connected gates toggle line and corrosponding wire num. if it is the 0 wire, or 1 wire.
-            switch (randomdef(max))
+            switch (Rando.Next(min, max))
             {
                 case 0:
                     topRow[0] = new AndGate(EndGate, 0);
@@ -89,7 +83,7 @@ namespace PingPongChamps
             for (int i = 0; i < middleRow.Length; i++)
             {
 
-                switch (randomdef(max))
+                switch (Rando.Next(min, max))
                 {
                     case 0:
                         middleRow[i] = new AndGate(topRow[0], a);
@@ -133,7 +127,7 @@ namespace PingPongChamps
             {
                 //need to implement counter to set each new rounds above gate in middle row/ check if the i-a thing is working
                 int b = (i % 1 == 0 ? i / 2 : i / 2 - 1);
-                switch (randomdef(max))
+                switch (Rando.Next(min, max))
                 {
                     case 0:
                         bottomRow[i] = new AndGate(middleRow[b], a);
@@ -189,19 +183,20 @@ namespace PingPongChamps
         private void Form1_Load(object sender, EventArgs e)
         {
           
-            int al = 0;//Need to fix difficulty issues with, wrong difficulty given.
+            int al = 0;//Need to fix difficulty issues with, wrong difficulty given., need to get index value from list, not string, as Lvl's is skipping ot default and not selecting correctly.
             switch (StartGame.Difficulty)
             {
-                case "Level 1 - Or, And.":
+                case 0:
                     al = 2;
                     break;
-                case "Level 2 - Nor, Nand.":
+                case 1:
                     al = 4;
                     break;
-                case "Level 3 - Xnor, Xor.":
+                case 2:
                     al = 6;
                     break;
-
+                default:
+                    throw new Exception();
             }
 
             Randomize(al);

@@ -13,7 +13,7 @@ namespace PingPongChamps
     public partial class StartGame : Form
     {
         Form o = new Explain();
-        public static string Difficulty;
+        public static int Difficulty;
         public StartGame()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace PingPongChamps
                 Form f = new Form1();
                 
                 f.ShowDialog();
-                string d = listBox1.GetItemText(listBox1.SelectedItem);
+                int d = listBox1.SelectedIndex;
                 Difficulty = d;
                 
             }
