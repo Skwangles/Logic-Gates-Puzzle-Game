@@ -20,6 +20,7 @@ namespace PingPongChamps
         bool ison6 = true;
         bool ison7 = true;
         bool ison8 = true;
+       
         Random Rando = new Random();
         Gate[] bottomRow = new Gate[4];
         Gate[] middleRow = new Gate[2];
@@ -39,6 +40,7 @@ namespace PingPongChamps
 
         private void Randomize(int max)
         {
+            int spacer = 15;
             int min = 0;
 
             //outwire is if the outline is the left or right input of the above gate (0 or 1)
@@ -75,7 +77,8 @@ namespace PingPongChamps
             }
 
             this.Controls.Add(topRow[0]);
-            topRow[0].Location = new Point(Form.ActiveForm.Width/2-20, 50);
+            topRow[0].Location = new Point(Form.ActiveForm.Width/2-75, 50);
+           
 
             topRow[0].BringToFront();
             //randomizes which things are where
@@ -98,12 +101,13 @@ namespace PingPongChamps
                         middleRow[i].Text = "Nor";
                         break;
                     case 3:
-                        middleRow[i] = new XorGate(topRow[0], a);
-                        middleRow[i].Text = "Xor";
-                        break;
-                    case 4:
+                        
                         middleRow[i] = new Nand(topRow[0], a);
                         middleRow[i].Text = "Nand";
+                        break;
+                    case 4:
+                        middleRow[i] = new XorGate(topRow[0], a);
+                        middleRow[i].Text = "Xor";
                         break;
                     case 5:
                         middleRow[i] = new XnorGate(topRow[0], a);
@@ -116,12 +120,12 @@ namespace PingPongChamps
                 else { a++; }
 
                 this.Controls.Add(middleRow[i]);
+
                 
-               
                 middleRow[i].BringToFront();
             }
-            middleRow[0].Location = new Point(50, 200);
-            middleRow[1].Location = new Point(100, 200);
+            middleRow[0].Location = new Point(Form1.ActiveForm.Width/8 + spacer, 170);
+            middleRow[1].Location = new Point(Form1.ActiveForm.Width/8 *4 + spacer, 170);
             a = 0;
             for (int i = 0; i < bottomRow.Length; i++)
             {
@@ -142,12 +146,13 @@ namespace PingPongChamps
                         bottomRow[i].Text = "Nor";
                         break;
                     case 3:
-                        bottomRow[i] = new XorGate(middleRow[b], a);
-                        bottomRow[i].Text = "Xor";
-                        break;
-                    case 4:
                         bottomRow[i] = new Nand(middleRow[b], a);
                         bottomRow[i].Text = "Nand";
+                        break;
+                    case 4:
+                       
+                        bottomRow[i] = new XorGate(middleRow[b], a);
+                        bottomRow[i].Text = "Xor";
                         break;
                     case 5:
                         bottomRow[i] = new XnorGate(middleRow[b], a);
@@ -159,14 +164,15 @@ namespace PingPongChamps
                 if (a > 0) a = 0;
                 else { a++; }
                 this.Controls.Add(bottomRow[i]);
-                
+               
 
                 bottomRow[i].BringToFront();
             }
-            bottomRow[0].Location = new Point(25, 250);
-            bottomRow[1].Location = new Point((1 + 1) * 53+10, 250);
-            bottomRow[2].Location = new Point((2 + 1) * 62, 250);
-            bottomRow[3].Location = new Point((3 + 1) * 70, 250);
+            
+            bottomRow[0].Location = new Point(23 + spacer, 240);
+            bottomRow[1].Location = new Point(93 + spacer, 240);
+            bottomRow[2].Location = new Point(185 + spacer, 240);
+            bottomRow[3].Location = new Point(256 +spacer, 240);
         }
         public void WinCondition()
         {

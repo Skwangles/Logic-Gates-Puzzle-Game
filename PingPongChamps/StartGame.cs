@@ -14,6 +14,7 @@ namespace PingPongChamps
     {
         Form o = new Explain();
         public static int Difficulty;
+       
         public StartGame()
         {
             InitializeComponent();
@@ -29,10 +30,10 @@ namespace PingPongChamps
             {
                              
                 Form f = new Form1();
-                
+                Difficulty = listBox1.SelectedIndex;
                 f.ShowDialog();
-                int d = listBox1.SelectedIndex;
-                Difficulty = d;
+               
+                
                 
             }
           
