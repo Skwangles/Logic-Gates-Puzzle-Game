@@ -72,6 +72,7 @@
     <Compile Include="StartGame.Designer.cs">
       <DependentUpon>StartGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wire.cs" />
     <Compile Include="XnorGate.cs" />
     <Compile Include="XorGate.cs" />
     <EmbeddedResource Include="Explain.resx">

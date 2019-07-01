@@ -20,22 +20,47 @@ namespace PingPongChamps
         bool ison6 = true;
         bool ison7 = true;
         bool ison8 = true;
-       
+        public PictureBox[] Wirepbs = new PictureBox[15];
+
+
+
+
+
+
+
         Random Rando = new Random();
         Gate[] bottomRow = new Gate[4];
         Gate[] middleRow = new Gate[2];
         Gate[] topRow = new Gate[1];
+        Wire WireC;
         End EndGate;//trying to pass current open instance
         public Form1()
         {
+            WireC = new Wire(this);
             EndGate = new End(this);
             InitializeComponent();
+            Wirepbs[0] = bottomrow0pb;
+            Wirepbs[1] = bottomrow1pb;
+            Wirepbs[2] = bottomrow2pb;
+            Wirepbs[3] = bottomrow3pb;
+            Wirepbs[4] = bottomrow4pb;
+            Wirepbs[5] = bottomrow5pb;
+            Wirepbs[6] = bottomrow6pb;
+            Wirepbs[7] = bottomrow7pb;
+            Wirepbs[8] = middlerow0pb;
+            Wirepbs[9] = middlerow1pb;
+            Wirepbs[10] = middlerow2pb;
+            Wirepbs[11] = middlerow3pb;
+            Wirepbs[12] = toprow0pb;
+            Wirepbs[13] = toprow1pb;
+            Wirepbs[14] = lightbulbpb;
         }
 
         private void Playey1Paddle_Click(object sender, EventArgs e)
         {
 
         }
+
 
 
         private void Randomize(int max)
@@ -191,6 +216,13 @@ namespace PingPongChamps
         private void Form1_Load(object sender, EventArgs e)
         {
           
+
+
+
+
+
+
+
             int al = 0;//Need to fix difficulty issues with, wrong difficulty given., need to get index value from list, not string, as Lvl's is skipping ot default and not selecting correctly.
             switch (StartGame.Difficulty)
             {
