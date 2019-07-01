@@ -36,7 +36,7 @@ namespace PingPongChamps
         {
 
         }
-       
+
 
         private void Randomize(int max)
         {
@@ -77,7 +77,9 @@ namespace PingPongChamps
             }
 
             this.Controls.Add(topRow[0]);
-            topRow[0].Location = new Point(Form.ActiveForm.Width/2-75, 50);
+            topRow[0].BackColor = System.Drawing.Color.Transparent;
+            topRow[0].Location = new Point(Form.ActiveForm.Width/2-90, 105);
+            
            
 
             topRow[0].BringToFront();
@@ -121,11 +123,11 @@ namespace PingPongChamps
 
                 this.Controls.Add(middleRow[i]);
 
-                
+                middleRow[i].BackColor = System.Drawing.Color.Transparent;
                 middleRow[i].BringToFront();
             }
-            middleRow[0].Location = new Point(Form1.ActiveForm.Width/8 + spacer, 170);
-            middleRow[1].Location = new Point(Form1.ActiveForm.Width/8 *4 + spacer, 170);
+            middleRow[0].Location = new Point(Form1.ActiveForm.Width/8 + spacer, 180);
+            middleRow[1].Location = new Point(Form1.ActiveForm.Width/8 *4 + spacer- 20, 180);
             a = 0;
             for (int i = 0; i < bottomRow.Length; i++)
             {
@@ -164,8 +166,8 @@ namespace PingPongChamps
                 if (a > 0) a = 0;
                 else { a++; }
                 this.Controls.Add(bottomRow[i]);
-               
 
+                bottomRow[i].BackColor = System.Drawing.Color.Transparent;
                 bottomRow[i].BringToFront();
             }
             
