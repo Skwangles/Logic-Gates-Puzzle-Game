@@ -21,7 +21,7 @@ namespace PingPongChamps
             if (on)
             {
                 //needs current open form1 instance to call .wincondition
-                form1.WinCondition();
+                form1.Winner();
             }
             else
             {

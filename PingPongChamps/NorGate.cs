@@ -16,7 +16,7 @@ namespace PingPongChamps
         public override void ToggleLine(bool on, int wire)
         {
             this.inputs[wire] = on;
-            next.ToggleLine(inputs[0] ^ inputs[1], outWireNum);
+            next.ToggleLine((inputs[0] || inputs[1]) ? false : true , outWireNum);
         }
     }
 }

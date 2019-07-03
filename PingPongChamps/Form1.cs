@@ -74,7 +74,7 @@ namespace PingPongChamps
             switch (Rando.Next(min, max))
             {
                 case 0:
-                    topRow[0] = new AndGate(EndGate, 0);
+                    topRow[0] = new AndGate2(EndGate, 0);
                     topRow[0].Text = "And";
                     break;
                 case 1:
@@ -109,42 +109,42 @@ namespace PingPongChamps
 
             topRow[0].BringToFront();
             //randomizes which things are where
-            int a = 0;
+            int switching = 0;
             for (int i = 0; i < middleRow.Length; i++)
             {
 
                 switch (Rando.Next(min, max))
                 {
                     case 0:
-                        middleRow[i] = new AndGate(topRow[0], a);
+                        middleRow[i] = new AndGate2(topRow[0], switching);
                         middleRow[i].Text = "And";
                         break;
                     case 1:
-                        middleRow[i] = new OrGate(topRow[0], a);
+                        middleRow[i] = new OrGate(topRow[0], switching);
                         middleRow[i].Text = "Or";
                         break;
                     case 2:
-                        middleRow[i] = new NorGate(topRow[0], a);
+                        middleRow[i] = new NorGate(topRow[0], switching);
                         middleRow[i].Text = "Nor";
                         break;
                     case 3:
                         
-                        middleRow[i] = new Nand(topRow[0], a);
+                        middleRow[i] = new Nand(topRow[0], switching);
                         middleRow[i].Text = "Nand";
                         break;
                     case 4:
-                        middleRow[i] = new XorGate(topRow[0], a);
+                        middleRow[i] = new XorGate(topRow[0], switching);
                         middleRow[i].Text = "Xor";
                         break;
                     case 5:
-                        middleRow[i] = new XnorGate(topRow[0], a);
+                        middleRow[i] = new XnorGate(topRow[0], switching);
                         middleRow[i].Text = "Xnor";
                         break;
                     default:
                         break;
                 }
-                if (a > 0) a = 0;
-                else { a++; }
+                if (switching > 0) switching = 0;
+                else { switching++; }
 
                 this.Controls.Add(middleRow[i]);
 
@@ -153,43 +153,43 @@ namespace PingPongChamps
             }
             middleRow[0].Location = new Point(Form1.ActiveForm.Width/8 + spacer, 180);
             middleRow[1].Location = new Point(Form1.ActiveForm.Width/8 *4 + spacer- 20, 180);
-            a = 0;
+            int switching2 = 0;
             for (int i = 0; i < bottomRow.Length; i++)
             {
                 //need to implement counter to set each new rounds above gate in middle row/ check if the i-a thing is working
-                int b = (i % 1 == 0 ? i / 2 : i / 2 - 1);
+                int b = (i % 1 == 0 ? i / 2 : i / 2 - 1);//Based on which number it is in the counter, because the level above is always 2 less values(because 2 of the below gates go to 1) I can rotate between if the number is 0, 1, 2, 3.
                 switch (Rando.Next(min, max))
                 {
                     case 0:
-                        bottomRow[i] = new AndGate(middleRow[b], a);
+                        bottomRow[i] = new AndGate2(middleRow[b], switching2);
                         bottomRow[i].Text = "And";
                         break;
                     case 1:
-                        bottomRow[i] = new OrGate(middleRow[b], a);
+                        bottomRow[i] = new OrGate(middleRow[b], switching2);
                         bottomRow[i].Text = "Or";
                         break;
                     case 2:
-                        bottomRow[i] = new NorGate(middleRow[b], a);
+                        bottomRow[i] = new NorGate(middleRow[b], switching2);
                         bottomRow[i].Text = "Nor";
                         break;
                     case 3:
-                        bottomRow[i] = new Nand(middleRow[b], a);
+                        bottomRow[i] = new Nand(middleRow[b], switching2);
                         bottomRow[i].Text = "Nand";
                         break;
                     case 4:
-                       
-                        bottomRow[i] = new XorGate(middleRow[b], a);
+
+                        bottomRow[i] = new XorGate(middleRow[b], switching2);
                         bottomRow[i].Text = "Xor";
                         break;
                     case 5:
-                        bottomRow[i] = new XnorGate(middleRow[b], a);
+                        bottomRow[i] = new XnorGate(middleRow[b], switching2);
                         bottomRow[i].Text = "Xnor";
                         break;
                     default:
                         break;
                 }
-                if (a > 0) a = 0;
-                else { a++; }
+                if (switching2 > 0) switching2 = 0;
+                else { switching2++; }
                 this.Controls.Add(bottomRow[i]);
 
                 bottomRow[i].BackColor = System.Drawing.Color.Transparent;
@@ -201,11 +201,11 @@ namespace PingPongChamps
             bottomRow[2].Location = new Point(185 + spacer, 240);
             bottomRow[3].Location = new Point(256 +spacer, 240);
         }
-        public void WinCondition()
+        public void Winner()
         {
             
-            WinBlocker.BringToFront();
-            WinBlocker.BackColor = Color.Black;
+            winBlocker.BringToFront();
+            winBlocker.BackColor = Color.Black;
             label1.BringToFront();
             label1.Text = "You Win!";
 
@@ -223,23 +223,23 @@ namespace PingPongChamps
 
 
 
-            int al = 0;//Need to fix difficulty issues with, wrong difficulty given., need to get index value from list, not string, as Lvl's is skipping ot default and not selecting correctly.
-            switch (StartGame.Difficulty)
+            int whatGates = 0;//Need to fix difficulty issues with, wrong difficulty given., need to get index value from list, not string, as Lvl's is skipping ot default and not selecting correctly.
+            switch (StartGame.difficulty)
             {
                 case 0:
-                    al = 2;
+                    whatGates = 2;
                     break;
                 case 1:
-                    al = 4;
+                    whatGates = 4;
                     break;
                 case 2:
-                    al = 6;
+                    whatGates = 6;
                     break;
                 default:
                     throw new Exception();
             }
 
-            Randomize(al);
+            Randomize(whatGates);
 
 
 

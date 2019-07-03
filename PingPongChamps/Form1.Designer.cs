@@ -37,7 +37,7 @@
             this.btn2 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
             this.btn8 = new System.Windows.Forms.Button();
-            this.WinBlocker = new System.Windows.Forms.PictureBox();
+            this.winBlocker = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bottomrow0pb = new System.Windows.Forms.PictureBox();
             this.bottomrow7pb = new System.Windows.Forms.PictureBox();
@@ -54,7 +54,7 @@
             this.middlerow1pb = new System.Windows.Forms.PictureBox();
             this.middlerow0pb = new System.Windows.Forms.PictureBox();
             this.lightbulbpb = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.WinBlocker)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.winBlocker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomrow0pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomrow7pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomrow6pb)).BeginInit();
@@ -194,12 +194,12 @@
             // 
             // WinBlocker
             // 
-            this.WinBlocker.BackColor = System.Drawing.Color.Transparent;
-            this.WinBlocker.Location = new System.Drawing.Point(0, 306);
-            this.WinBlocker.Name = "WinBlocker";
-            this.WinBlocker.Size = new System.Drawing.Size(321, 596);
-            this.WinBlocker.TabIndex = 8;
-            this.WinBlocker.TabStop = false;
+            this.winBlocker.BackColor = System.Drawing.Color.Transparent;
+            this.winBlocker.Location = new System.Drawing.Point(0, 306);
+            this.winBlocker.Name = "WinBlocker";
+            this.winBlocker.Size = new System.Drawing.Size(321, 596);
+            this.winBlocker.TabIndex = 8;
+            this.winBlocker.TabStop = false;
             // 
             // label1
             // 
@@ -363,12 +363,12 @@
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn6);
             this.Controls.Add(this.btn1);
-            this.Controls.Add(this.WinBlocker);
+            this.Controls.Add(this.winBlocker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.WinBlocker)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.winBlocker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomrow0pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomrow7pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bottomrow6pb)).EndInit();
@@ -399,7 +399,7 @@
         private System.Windows.Forms.Button btn2;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btn8;
-        private System.Windows.Forms.PictureBox WinBlocker;
+        private System.Windows.Forms.PictureBox winBlocker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox bottomrow0pb;
         private System.Windows.Forms.PictureBox bottomrow7pb;

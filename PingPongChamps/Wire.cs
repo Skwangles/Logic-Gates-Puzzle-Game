@@ -16,12 +16,12 @@ namespace PingPongChamps
         }
 
         private bool on = false;
-        public void ToggleWire(int Place)
+        public void ToggleWire(int placed)
         {
             if (on)
             {
                 on = false;
-                switch (Place)
+                switch (placed)
                 {
                     case 0: //Need to implement call inside program. By when the different gates are defined, they are given a case. or "Place" which is to be defined, and will toggle the colors of the pbs/wires
                         form1.Wirepbs[0].BackColor = System.Drawing.Color.Red;
@@ -79,7 +79,7 @@ namespace PingPongChamps
             else
             {
                 on = true;
-                switch (Place)
+                switch (placed)
                 {
                     case 0:
                         form1.Wirepbs[0].BackColor = System.Drawing.Color.Blue;
