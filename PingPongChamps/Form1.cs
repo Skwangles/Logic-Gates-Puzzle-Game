@@ -20,14 +20,9 @@ namespace PingPongChamps
         bool ison6 = true;
         bool ison7 = true;
         bool ison8 = true;
+        public bool gamestart = false;
+        public int whatGates = 0;
         public PictureBox[] Wirepbs = new PictureBox[15];
-
-
-
-
-
-
-
         Random Rando = new Random();
         Gate[] bottomRow = new Gate[4];
         Gate[] middleRow = new Gate[2];
@@ -60,10 +55,7 @@ namespace PingPongChamps
         {
 
         }
-
-
-
-        private void Randomize(int max)
+        public void Randomize(int max)
         {
             int spacer = 15;
             int min = 0;
@@ -103,9 +95,9 @@ namespace PingPongChamps
 
             this.Controls.Add(topRow[0]);
             topRow[0].BackColor = System.Drawing.Color.Transparent;
-            topRow[0].Location = new Point(Form.ActiveForm.Width/2-90, 105);
-            
-           
+            topRow[0].Location = new Point(this.Width / 2 - 90, 105);
+
+
 
             topRow[0].BringToFront();
             //randomizes which things are where
@@ -128,7 +120,7 @@ namespace PingPongChamps
                         middleRow[i].Text = "Nor";
                         break;
                     case 3:
-                        
+
                         middleRow[i] = new Nand(topRow[0], switching);
                         middleRow[i].Text = "Nand";
                         break;
@@ -151,8 +143,8 @@ namespace PingPongChamps
                 middleRow[i].BackColor = System.Drawing.Color.Transparent;
                 middleRow[i].BringToFront();
             }
-            middleRow[0].Location = new Point(Form1.ActiveForm.Width/8 + spacer, 180);
-            middleRow[1].Location = new Point(Form1.ActiveForm.Width/8 *4 + spacer- 20, 180);
+            middleRow[0].Location = new Point(this.Width / 8 + spacer, 180);
+            middleRow[1].Location = new Point(this.Width / 8 * 4 + spacer - 20, 180);
             int switching2 = 0;
             for (int i = 0; i < bottomRow.Length; i++)
             {
@@ -195,35 +187,38 @@ namespace PingPongChamps
                 bottomRow[i].BackColor = System.Drawing.Color.Transparent;
                 bottomRow[i].BringToFront();
             }
-            
+
             bottomRow[0].Location = new Point(23 + spacer, 240);
             bottomRow[1].Location = new Point(93 + spacer, 240);
             bottomRow[2].Location = new Point(185 + spacer, 240);
-            bottomRow[3].Location = new Point(256 +spacer, 240);
+            bottomRow[3].Location = new Point(256 + spacer, 240);
+
+
+            bottomRow[0].ToggleLine(false, 0);
+            bottomRow[1].ToggleLine(false, 0);
+            bottomRow[2].ToggleLine(false, 0);
+            bottomRow[3].ToggleLine(false, 0);
+            //trying to load all the different logic gates, because in level 2+ they can be automatically on, as like Nand, it turns on as it requires no inputs or 1 input. so need to find a way to load the logic gates and to turn on some buttons so that they are off, or maybe randomize which buttoms are on, till the game works.
+            gamestart = true;
         }
         public void Winner()
         {
-            
-            winBlocker.BringToFront();
-            winBlocker.BackColor = Color.Black;
-            label1.BringToFront();
-            label1.Text = "You Win!";
-
+            if (gamestart)
+            {
+                winBlocker.BringToFront();
+                winBlocker.BackColor = Color.Black;
+                label1.BringToFront();
+                label1.Text = "You Win!";
+            }
+            else
+            {
+                
+            }
         }
 
-
-
-        private void Form1_Load(object sender, EventArgs e)
+        public void Mainsetup()
         {
-          
-
-
-
-
-
-
-
-            int whatGates = 0;//Need to fix difficulty issues with, wrong difficulty given., need to get index value from list, not string, as Lvl's is skipping ot default and not selecting correctly.
+           //Need to fix difficulty issues with, wrong difficulty given., need to get index value from list, not string, as Lvl's is skipping ot default and not selecting correctly.
             switch (StartGame.difficulty)
             {
                 case 0:
@@ -240,9 +235,12 @@ namespace PingPongChamps
             }
 
             Randomize(whatGates);
+        }
 
 
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Mainsetup();          
         }
 
         private void btn1_Click(object sender, EventArgs e)
