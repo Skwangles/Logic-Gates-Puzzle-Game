@@ -50,6 +50,7 @@
     <Compile Include="AndGate2.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ButtonPress.cs" />
     <Compile Include="End.cs" />
     <Compile Include="Explain.cs">
       <SubType>Form</SubType>

@@ -66,7 +66,7 @@ namespace PingPongChamps
             switch (Rando.Next(min, max))
             {
                 case 0:
-                    topRow[0] = new AndGate2(EndGate, 0);
+                    topRow[0] = new AndGate(EndGate, 0);
                     topRow[0].Text = "And";
                     break;
                 case 1:
@@ -108,7 +108,7 @@ namespace PingPongChamps
                 switch (Rando.Next(min, max))
                 {
                     case 0:
-                        middleRow[i] = new AndGate2(topRow[0], switching);
+                        middleRow[i] = new AndGate(topRow[0], switching);
                         middleRow[i].Text = "And";
                         break;
                     case 1:
@@ -153,7 +153,7 @@ namespace PingPongChamps
                 switch (Rando.Next(min, max))
                 {
                     case 0:
-                        bottomRow[i] = new AndGate2(middleRow[b], switching2);
+                        bottomRow[i] = new AndGate(middleRow[b], switching2);
                         bottomRow[i].Text = "And";
                         break;
                     case 1:
@@ -194,6 +194,10 @@ namespace PingPongChamps
             bottomRow[3].Location = new Point(256 + spacer, 240);
 
 
+            bottomRow[0].ToggleLine(true, 0);
+            bottomRow[1].ToggleLine(true, 0);
+            bottomRow[2].ToggleLine(true, 0);
+            bottomRow[3].ToggleLine(true, 0);
             bottomRow[0].ToggleLine(false, 0);
             bottomRow[1].ToggleLine(false, 0);
             bottomRow[2].ToggleLine(false, 0);
@@ -201,6 +205,13 @@ namespace PingPongChamps
             //trying to load all the different logic gates, because in level 2+ they can be automatically on, as like Nand, it turns on as it requires no inputs or 1 input. so need to find a way to load the logic gates and to turn on some buttons so that they are off, or maybe randomize which buttoms are on, till the game works.
             gamestart = true;
         }
+        public void RandomizeButtonOn()
+        {
+
+        }
+
+
+
         public void Winner()
         {
             if (gamestart)
@@ -251,7 +262,7 @@ namespace PingPongChamps
                 ison1 = false;
                 btn1.Text = "On";
                 btn1.BackColor = Color.Blue;
-
+                
             }
             else
             {
