@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace PingPongChamps
 {
     public partial class Form1 : Form
-    {
+    {//Need to load all gates, if End gate on, turn on a random set of buttons, and if still on, randomize again, until you have a button configuration that works...Or, Add a NOT gate to the end if the output is ON.
         bool ison1 = true;
         bool ison2 = true;
         bool ison3 = true;
