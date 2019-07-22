@@ -29,7 +29,7 @@ namespace PingPongChamps
             if (ison1)
             {
                 
-                formm.[0].ToggleLine(true, 0);
+                //formm.[0].ToggleLine(true, 0);
                 ison1 = false;
                 mybtn.Text = "On";
                 //formm.mybtn.BackColor = Color.Blue;    Need to change so that the button on Form1 is changed, so that looks change.

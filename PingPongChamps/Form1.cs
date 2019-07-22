@@ -24,11 +24,17 @@ namespace PingPongChamps
         public int whatGates = 0;
         public PictureBox[] Wirepbs = new PictureBox[15];
         Random Rando = new Random();
+
+
+
+
+
         Gate[] bottomRow = new Gate[4];
         Gate[] middleRow = new Gate[2];
         Gate[] topRow = new Gate[1];
         Wire WireC;
         End EndGate;//trying to pass current open instance
+
         public Form1()
         {
             WireC = new Wire(this);
@@ -50,7 +56,12 @@ namespace PingPongChamps
             Wirepbs[13] = toprow1pb;
             Wirepbs[14] = lightbulbpb;
         }
-
+        //And 0, Or 1, Nor 2, Nand 3, Xor 4, Xnor 5
+        /*int[] SetTopLevelGate = new int[10]                     { 0, 0, 1, 1, 2, 2, 3, 3, 4, 5 };
+        int[,] SetMiddleLevel = new int[10, 2] { { 1,0}, { 0,0 }, {1 ,1 }, {0 ,0 }, { , }, { , }, { , }, { , }, { , }, { , } };
+        int[,] SetBottomLevel = new int[10, 4] { { ,,, }, { ,,, }, { ,,, }, { ,,, }, { ,,, }, { ,,, }, { ,,, }, { ,,, }, { ,,, }, { ,,, } };
+        int[,] SetButtonOnOff = new int[10, 8] { { ,,,,,,, }, { ,,,,,,, }, { ,,,,,,, }, { ,,,,,,, }, { ,,,,,,, }, { ,,,,,,, }, { ,,,,,,, }, { ,,,,,,, }, { ,,,,,,, }, { ,,,,,,, } };
+        */
         private void Playey1Paddle_Click(object sender, EventArgs e)
         {
 
@@ -106,7 +117,7 @@ namespace PingPongChamps
             {
 
                 switch (Rando.Next(min, max))
-                {
+                { //And 0, Or 1, Nor 2, Nand 3, Xor 4, Xnor 5
                     case 0:
                         middleRow[i] = new AndGate(topRow[0], switching);
                         middleRow[i].Text = "And";
@@ -223,13 +234,13 @@ namespace PingPongChamps
             }
             else
             {
-                
+
             }
         }
 
         public void Mainsetup()
         {
-           //Need to fix difficulty issues with, wrong difficulty given., need to get index value from list, not string, as Lvl's is skipping ot default and not selecting correctly.
+            //Need to fix difficulty issues with, wrong difficulty given., need to get index value from list, not string, as Lvl's is skipping ot default and not selecting correctly.
             switch (StartGame.difficulty)
             {
                 case 0:
@@ -251,7 +262,7 @@ namespace PingPongChamps
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Mainsetup();          
+            Mainsetup();
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -262,7 +273,7 @@ namespace PingPongChamps
                 ison1 = false;
                 btn1.Text = "On";
                 btn1.BackColor = Color.Blue;
-                
+
             }
             else
             {
@@ -443,5 +454,16 @@ namespace PingPongChamps
         {
 
         }
+        //Making set levels to randomly rotate through.
+
+
+
+
+
     }
+
 }
+
+
+
+

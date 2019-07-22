@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace PingPongChamps
-{
+{//this Class Is not being used
+
     class AndGate2 : Gate
     {
         public AndGate2(Gate next, int outWireNum) : base(next, outWireNum, 2)

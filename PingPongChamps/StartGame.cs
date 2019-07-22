@@ -14,7 +14,7 @@ namespace PingPongChamps
     {
         Form o = new Explain();
         public static int difficulty;
-       
+
         public StartGame()
         {
             InitializeComponent();
@@ -22,22 +22,15 @@ namespace PingPongChamps
 
         private void Startbtn_Click(object sender, EventArgs e)
         {
-            if (listBox1.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a Difficulty", "Level not selected", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-            }
-            else
-            {
-                             
-                Form f = new Form1();
-                difficulty = listBox1.SelectedIndex;
-                f.ShowDialog();
-               
-                
-                
-            }
-          
-    }
+
+            Form f = new Form1();
+            f.ShowDialog();
+
+
+
+
+
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -56,7 +49,7 @@ namespace PingPongChamps
 
         private void ExplainsLGbtn_Click(object sender, EventArgs e)
         {
-            
+
             o.ShowDialog();
         }
     }
