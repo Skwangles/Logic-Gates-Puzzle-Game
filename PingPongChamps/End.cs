@@ -10,7 +10,7 @@ namespace PingPongChamps
     {
         private Form1 form1;
 
-        public End(Form1 form1) : base(null, 0, 2)
+        public End(Form1 form1) : base(null, 0, 2, null)
         {
             this.form1 = form1;
         }

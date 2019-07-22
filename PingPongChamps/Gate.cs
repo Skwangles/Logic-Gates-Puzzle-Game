@@ -9,12 +9,13 @@ namespace PingPongChamps
 {
     abstract class Gate : Label 
     {
-        public Gate(Gate next, int outWireNum, int numWires) {
+        public Gate(Gate next, int outWireNum, int numWires, PictureBox output) {
             this.next = next;
+            this.outputPb = output;
             this.outWireNum = outWireNum;
             this.inputs = new bool[numWires];
         }
-
+        public PictureBox outputPb;
         public Gate next;
         public int outWireNum;
         public bool[] inputs;

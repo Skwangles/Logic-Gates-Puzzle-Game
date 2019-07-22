@@ -22,7 +22,7 @@ namespace PingPongChamps
         bool ison8 = true;
         public bool gamestart = false;
         public int whatGates = 0;
-        public PictureBox[] Wirepbs = new PictureBox[15];
+        public PictureBox[] Wirepbs = new PictureBox[21];
         Random Rando = new Random();
 
 
@@ -48,12 +48,20 @@ namespace PingPongChamps
             Wirepbs[5] = bottomrow5pb;
             Wirepbs[6] = bottomrow6pb;
             Wirepbs[7] = bottomrow7pb;
-            Wirepbs[8] = middlerow0pb;
-            Wirepbs[9] = middlerow1pb;
-            Wirepbs[10] = middlerow2pb;
-            Wirepbs[11] = middlerow3pb;
-            Wirepbs[12] = toprow0pb;
-            Wirepbs[13] = toprow1pb;
+            Wirepbs[8] = null;
+            Wirepbs[9] = null;
+            Wirepbs[15] = null;
+            Wirepbs[16] = null;
+            Wirepbs[17] = null;
+            Wirepbs[18] = null;
+            Wirepbs[19] = null;
+           
+            Wirepbs[10] = middlerow0pb;
+            Wirepbs[11] = middlerow1pb;
+            Wirepbs[12] = middlerow2pb;
+            Wirepbs[13] = middlerow3pb;
+            Wirepbs[20] = toprow0pb;
+            Wirepbs[21] = toprow1pb;
             Wirepbs[14] = lightbulbpb;
         }
         //And 0, Or 1, Nor 2, Nand 3, Xor 4, Xnor 5
@@ -77,27 +85,27 @@ namespace PingPongChamps
             switch (Rando.Next(min, max))
             {
                 case 0:
-                    topRow[0] = new AndGate(EndGate, 0);
+                    topRow[0] = new AndGate(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "And";
                     break;
                 case 1:
-                    topRow[0] = new OrGate(EndGate, 0);
+                    topRow[0] = new OrGate(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Or";
                     break;
                 case 2:
-                    topRow[0] = new NorGate(EndGate, 0);
+                    topRow[0] = new NorGate(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Nor";
                     break;
                 case 3:
-                    topRow[0] = new Nand(EndGate, 0);
+                    topRow[0] = new Nand(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Nand";
                     break;
                 case 4:
-                    topRow[0] = new XorGate(EndGate, 0);
+                    topRow[0] = new XorGate(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Xor";
                     break;
                 case 5:
-                    topRow[0] = new XnorGate(EndGate, 0);
+                    topRow[0] = new XnorGate(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Xnor";
                     break;
                 default:
@@ -119,28 +127,28 @@ namespace PingPongChamps
                 switch (Rando.Next(min, max))
                 { //And 0, Or 1, Nor 2, Nand 3, Xor 4, Xnor 5
                     case 0:
-                        middleRow[i] = new AndGate(topRow[0], switching);
+                        middleRow[i] = new AndGate(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "And";
                         break;
                     case 1:
-                        middleRow[i] = new OrGate(topRow[0], switching);
+                        middleRow[i] = new OrGate(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Or";
                         break;
                     case 2:
-                        middleRow[i] = new NorGate(topRow[0], switching);
+                        middleRow[i] = new NorGate(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Nor";
                         break;
                     case 3:
 
-                        middleRow[i] = new Nand(topRow[0], switching);
+                        middleRow[i] = new Nand(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Nand";
                         break;
                     case 4:
-                        middleRow[i] = new XorGate(topRow[0], switching);
+                        middleRow[i] = new XorGate(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Xor";
                         break;
                     case 5:
-                        middleRow[i] = new XnorGate(topRow[0], switching);
+                        middleRow[i] = new XnorGate(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Xnor";
                         break;
                     default:
@@ -164,28 +172,28 @@ namespace PingPongChamps
                 switch (Rando.Next(min, max))
                 {
                     case 0:
-                        bottomRow[i] = new AndGate(middleRow[b], switching2);
+                        bottomRow[i] = new AndGate(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "And";
                         break;
                     case 1:
-                        bottomRow[i] = new OrGate(middleRow[b], switching2);
+                        bottomRow[i] = new OrGate(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Or";
                         break;
                     case 2:
-                        bottomRow[i] = new NorGate(middleRow[b], switching2);
+                        bottomRow[i] = new NorGate(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Nor";
                         break;
                     case 3:
-                        bottomRow[i] = new Nand(middleRow[b], switching2);
+                        bottomRow[i] = new Nand(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Nand";
                         break;
                     case 4:
 
-                        bottomRow[i] = new XorGate(middleRow[b], switching2);
+                        bottomRow[i] = new XorGate(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Xor";
                         break;
                     case 5:
-                        bottomRow[i] = new XnorGate(middleRow[b], switching2);
+                        bottomRow[i] = new XnorGate(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Xnor";
                         break;
                     default:
@@ -263,8 +271,7 @@ namespace PingPongChamps
         private void Form1_Load(object sender, EventArgs e)
         {
             Mainsetup();
-        }
-
+        }        
         private void btn1_Click(object sender, EventArgs e)
         {
             if (ison1)
@@ -273,7 +280,7 @@ namespace PingPongChamps
                 ison1 = false;
                 btn1.Text = "On";
                 btn1.BackColor = Color.Blue;
-
+                Wirepbs[0].BackColor = Color.Red;
             }
             else
             {
@@ -281,6 +288,7 @@ namespace PingPongChamps
                 ison1 = true;
                 btn1.Text = "Off";
                 btn1.BackColor = Color.Red;
+                Wirepbs[0].BackColor = Color.Red;
             }
         }
 
@@ -292,6 +300,7 @@ namespace PingPongChamps
                 ison2 = false;
                 btn2.Text = "On";
                 btn2.BackColor = Color.Blue;
+                Wirepbs[1].BackColor = Color.Red;
             }
             else
             {
@@ -299,6 +308,7 @@ namespace PingPongChamps
                 ison2 = true;
                 btn2.Text = "Off";
                 btn2.BackColor = Color.Red;
+                Wirepbs[1].BackColor = Color.Red;
             }
         }
 
@@ -310,6 +320,7 @@ namespace PingPongChamps
                 ison3 = false;
                 btn3.Text = "On";
                 btn3.BackColor = Color.Blue;
+                Wirepbs[2].BackColor = Color.Red;
             }
             else
             {
@@ -317,6 +328,7 @@ namespace PingPongChamps
                 ison3 = true;
                 btn3.Text = "Off";
                 btn3.BackColor = Color.Red;
+                Wirepbs[2].BackColor = Color.Red;
             }
         }
 
@@ -328,6 +340,7 @@ namespace PingPongChamps
                 ison4 = false;
                 btn4.Text = "On";
                 btn4.BackColor = Color.Blue;
+                Wirepbs[3].BackColor = Color.Red;
             }
             else
             {
@@ -335,6 +348,7 @@ namespace PingPongChamps
                 ison4 = true;
                 btn4.Text = "Off";
                 btn4.BackColor = Color.Red;
+                Wirepbs[3].BackColor = Color.Red;
             }
         }
 
@@ -346,6 +360,7 @@ namespace PingPongChamps
                 ison5 = false;
                 btn5.Text = "On";
                 btn5.BackColor = Color.Blue;
+                Wirepbs[4].BackColor = Color.Red;
             }
             else
             {
@@ -353,6 +368,7 @@ namespace PingPongChamps
                 ison5 = true;
                 btn5.Text = "Off";
                 btn5.BackColor = Color.Red;
+                Wirepbs[4].BackColor = Color.Red;
             }
         }
 
@@ -364,6 +380,7 @@ namespace PingPongChamps
                 ison6 = false;
                 btn6.Text = "On";
                 btn6.BackColor = Color.Blue;
+                Wirepbs[5].BackColor = Color.Red;
             }
             else
             {
@@ -371,6 +388,7 @@ namespace PingPongChamps
                 ison6 = true;
                 btn6.Text = "Off";
                 btn6.BackColor = Color.Red;
+                Wirepbs[5].BackColor = Color.Red;
             }
         }
 
@@ -382,6 +400,7 @@ namespace PingPongChamps
                 ison7 = false;
                 btn7.Text = "On";
                 btn7.BackColor = Color.Blue;
+                Wirepbs[6].BackColor = Color.Red;
             }
             else
             {
@@ -389,6 +408,7 @@ namespace PingPongChamps
                 ison7 = true;
                 btn7.Text = "Off";
                 btn7.BackColor = Color.Red;
+                Wirepbs[6].BackColor = Color.Red;
             }
         }
 
@@ -400,6 +420,7 @@ namespace PingPongChamps
                 ison8 = false;
                 btn8.Text = "On";
                 btn8.BackColor = Color.Blue;
+                Wirepbs[7].BackColor = Color.Red;
             }
             else
             {
@@ -407,6 +428,7 @@ namespace PingPongChamps
                 ison8 = true;
                 btn8.Text = "Off";
                 btn8.BackColor = Color.Red;
+                Wirepbs[7].BackColor = Color.Red;
             }
         }
 

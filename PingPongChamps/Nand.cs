@@ -9,7 +9,7 @@ namespace PingPongChamps
 {
     class Nand : Gate
     {
-        public Nand(Gate next, int outWireNum) : base(next, outWireNum, 2)
+        public Nand(Gate next, int outWireNum, PictureBox output) : base(next, outWireNum, 2, output)
         {
         }
 
@@ -17,6 +17,14 @@ namespace PingPongChamps
         {
             this.inputs[wire] = on;
             next.ToggleLine(inputs[0] && inputs[1] ? false : true, outWireNum);
+            if (inputs[0] && inputs[1])
+            {
+                
+                outputPb.BackColor = System.Drawing.Color.Blue;
+            }
+            {
+                outputPb.BackColor = System.Drawing.Color.Red;
+            }
         }
     }
 }

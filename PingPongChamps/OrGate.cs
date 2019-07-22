@@ -9,7 +9,7 @@ namespace PingPongChamps
 {
     class OrGate : Gate
     {
-        public OrGate(Gate next, int outWireNum) : base(next, outWireNum, 2)
+        public OrGate(Gate next, int outWireNum, PictureBox output) : base(next, outWireNum, 2, output)
         {
         }
 
@@ -17,6 +17,13 @@ namespace PingPongChamps
         {
             this.inputs[wire] = on;
             next.ToggleLine(inputs[0] || inputs[1], outWireNum);
+            if (inputs[0] || inputs[1])
+            {
+                outputPb.BackColor = System.Drawing.Color.Red;
+            }
+            {
+                outputPb.BackColor = System.Drawing.Color.Blue;
+            }
         }
     }
 }

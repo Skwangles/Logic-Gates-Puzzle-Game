@@ -9,7 +9,7 @@ namespace PingPongChamps
 {
     class XnorGate : Gate
     {
-        public XnorGate(Gate next, int outWireNum) : base(next, outWireNum, 2)
+        public XnorGate(Gate next, int outWireNum, PictureBox output) : base(next, outWireNum, 2, output)
         {
         }
 
@@ -17,6 +17,13 @@ namespace PingPongChamps
         {
             this.inputs[wire] = on;
             next.ToggleLine((inputs[0] && inputs[1]) || (inputs[0] == false && inputs[1] == false), outWireNum);
+            if ((inputs[0] && inputs[1]) || (inputs[0] == false && inputs[1] == false))
+            {               
+                outputPb.BackColor = System.Drawing.Color.Red;
+            }
+            {
+                outputPb.BackColor = System.Drawing.Color.Blue;
+            }
         }
     }
 }
