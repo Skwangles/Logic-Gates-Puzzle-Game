@@ -20,7 +20,7 @@ namespace PingPongChamps
             {
                 outputPb.BackColor = System.Drawing.Color.Red;
             }
-            {
+            else {
                 outputPb.BackColor = System.Drawing.Color.Blue;
             }
         }

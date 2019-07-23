@@ -22,7 +22,7 @@ namespace PingPongChamps
         bool ison8 = true;
         public bool gamestart = false;
         public int whatGates = 0;
-        public PictureBox[] Wirepbs = new PictureBox[21];
+        public PictureBox[] Wirepbs = new PictureBox[22];
         Random Rando = new Random();
 
 
@@ -288,7 +288,7 @@ namespace PingPongChamps
                 ison1 = true;
                 btn1.Text = "Off";
                 btn1.BackColor = Color.Red;
-                Wirepbs[0].BackColor = Color.Red;
+                Wirepbs[0].BackColor = Color.Blue;
             }
         }
 
@@ -308,7 +308,7 @@ namespace PingPongChamps
                 ison2 = true;
                 btn2.Text = "Off";
                 btn2.BackColor = Color.Red;
-                Wirepbs[1].BackColor = Color.Red;
+                Wirepbs[1].BackColor = Color.Blue;
             }
         }
 
@@ -328,7 +328,7 @@ namespace PingPongChamps
                 ison3 = true;
                 btn3.Text = "Off";
                 btn3.BackColor = Color.Red;
-                Wirepbs[2].BackColor = Color.Red;
+                Wirepbs[2].BackColor = Color.Blue;
             }
         }
 
@@ -348,7 +348,7 @@ namespace PingPongChamps
                 ison4 = true;
                 btn4.Text = "Off";
                 btn4.BackColor = Color.Red;
-                Wirepbs[3].BackColor = Color.Red;
+                Wirepbs[3].BackColor = Color.Blue;
             }
         }
 
@@ -368,7 +368,7 @@ namespace PingPongChamps
                 ison5 = true;
                 btn5.Text = "Off";
                 btn5.BackColor = Color.Red;
-                Wirepbs[4].BackColor = Color.Red;
+                Wirepbs[4].BackColor = Color.Blue;
             }
         }
 
@@ -388,7 +388,7 @@ namespace PingPongChamps
                 ison6 = true;
                 btn6.Text = "Off";
                 btn6.BackColor = Color.Red;
-                Wirepbs[5].BackColor = Color.Red;
+                Wirepbs[5].BackColor = Color.Blue;
             }
         }
 
@@ -408,7 +408,7 @@ namespace PingPongChamps
                 ison7 = true;
                 btn7.Text = "Off";
                 btn7.BackColor = Color.Red;
-                Wirepbs[6].BackColor = Color.Red;
+                Wirepbs[6].BackColor = Color.Blue;
             }
         }
 
@@ -428,7 +428,7 @@ namespace PingPongChamps
                 ison8 = true;
                 btn8.Text = "Off";
                 btn8.BackColor = Color.Red;
-                Wirepbs[7].BackColor = Color.Red;
+                Wirepbs[7].BackColor = Color.Blue;
             }
         }
 
