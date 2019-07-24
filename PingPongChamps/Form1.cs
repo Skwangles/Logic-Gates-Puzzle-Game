@@ -63,6 +63,7 @@ namespace PingPongChamps
             Wirepbs[20] = toprow0pb;
             Wirepbs[21] = toprow1pb;
             Wirepbs[14] = lightbulbpb;
+
         }
         //And 0, Or 1, Nor 2, Nand 3, Xor 4, Xnor 5
         /*int[] SetTopLevelGate = new int[10]                     { 0, 0, 1, 1, 2, 2, 3, 3, 4, 5 };
@@ -95,18 +96,22 @@ namespace PingPongChamps
                 case 2:
                     topRow[0] = new NorGate(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Nor";
-                    break;
+                    
+                break;
                 case 3:
                     topRow[0] = new Nand(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Nand";
+                    
                     break;
                 case 4:
                     topRow[0] = new XorGate(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Xor";
+                   
                     break;
                 case 5:
                     topRow[0] = new XnorGate(EndGate, 0, Wirepbs[14]);
                     topRow[0].Text = "Xnor";
+                   
                     break;
                 default:
                     break;
@@ -137,19 +142,23 @@ namespace PingPongChamps
                     case 2:
                         middleRow[i] = new NorGate(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Nor";
+                       
                         break;
                     case 3:
 
                         middleRow[i] = new Nand(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Nand";
+                        
                         break;
                     case 4:
                         middleRow[i] = new XorGate(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Xor";
+                        
                         break;
                     case 5:
                         middleRow[i] = new XnorGate(topRow[0], switching, Wirepbs[i + 20]);
                         middleRow[i].Text = "Xnor";
+                        
                         break;
                     default:
                         break;
@@ -182,19 +191,23 @@ namespace PingPongChamps
                     case 2:
                         bottomRow[i] = new NorGate(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Nor";
+                        
                         break;
                     case 3:
                         bottomRow[i] = new Nand(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Nand";
+                        
                         break;
                     case 4:
 
                         bottomRow[i] = new XorGate(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Xor";
+                        
                         break;
                     case 5:
                         bottomRow[i] = new XnorGate(middleRow[b], switching2, Wirepbs[i + 10]);
                         bottomRow[i].Text = "Xnor";
+                        
                         break;
                     default:
                         break;
@@ -206,13 +219,24 @@ namespace PingPongChamps
                 bottomRow[i].BackColor = System.Drawing.Color.Transparent;
                 bottomRow[i].BringToFront();
             }
-
+            
             bottomRow[0].Location = new Point(23 + spacer, 240);
             bottomRow[1].Location = new Point(93 + spacer, 240);
             bottomRow[2].Location = new Point(185 + spacer, 240);
             bottomRow[3].Location = new Point(256 + spacer, 240);
 
-
+            LoadGates();
+            //trying to load all the different logic gates, because in level 2+ they can be automatically on, as like Nand, it turns on as it requires no inputs or 1 input. so need to find a way to load the logic gates and to turn on some buttons so that they are off, or maybe randomize which buttoms are on, till the game works.
+            
+        }
+        private void Exception()
+        {
+            throw new Exception();
+        }
+        public void LoadGates()
+        {
+            gamestart = false;
+            /*
             bottomRow[0].ToggleLine(true, 0);
             bottomRow[1].ToggleLine(true, 0);
             bottomRow[2].ToggleLine(true, 0);
@@ -221,12 +245,36 @@ namespace PingPongChamps
             bottomRow[1].ToggleLine(false, 0);
             bottomRow[2].ToggleLine(false, 0);
             bottomRow[3].ToggleLine(false, 0);
-            //trying to load all the different logic gates, because in level 2+ they can be automatically on, as like Nand, it turns on as it requires no inputs or 1 input. so need to find a way to load the logic gates and to turn on some buttons so that they are off, or maybe randomize which buttoms are on, till the game works.
+            */
+            btn1.PerformClick();
+            btn2.PerformClick();
+            btn3.PerformClick();
+            btn4.PerformClick();
+            btn5.PerformClick();
+            btn6.PerformClick();
+            btn7.PerformClick();
+            btn8.PerformClick();
+            btn1.PerformClick();
+            btn2.PerformClick();
+            btn3.PerformClick();
+            btn4.PerformClick();
+            btn5.PerformClick();
+            btn6.PerformClick();
+            btn7.PerformClick();
+            btn8.PerformClick();
+            
+
             gamestart = true;
         }
+
+
+
+
+
         public void RandomizeButtonOn()
         {
 
+            
         }
 
 
@@ -263,7 +311,8 @@ namespace PingPongChamps
                 default:
                     throw new Exception();
             }
-
+            
+            whatGates = 6;
             Randomize(whatGates);
         }
 
@@ -280,7 +329,7 @@ namespace PingPongChamps
                 ison1 = false;
                 btn1.Text = "On";
                 btn1.BackColor = Color.Blue;
-                Wirepbs[0].BackColor = Color.Red;
+                Wirepbs[0].BackColor = Color.Blue;
             }
             else
             {
@@ -288,7 +337,7 @@ namespace PingPongChamps
                 ison1 = true;
                 btn1.Text = "Off";
                 btn1.BackColor = Color.Red;
-                Wirepbs[0].BackColor = Color.Blue;
+                Wirepbs[0].BackColor = Color.Red;
             }
         }
 
@@ -300,7 +349,7 @@ namespace PingPongChamps
                 ison2 = false;
                 btn2.Text = "On";
                 btn2.BackColor = Color.Blue;
-                Wirepbs[1].BackColor = Color.Red;
+                Wirepbs[1].BackColor = Color.Blue;
             }
             else
             {
@@ -308,7 +357,7 @@ namespace PingPongChamps
                 ison2 = true;
                 btn2.Text = "Off";
                 btn2.BackColor = Color.Red;
-                Wirepbs[1].BackColor = Color.Blue;
+                Wirepbs[1].BackColor = Color.Red;
             }
         }
 
@@ -320,7 +369,7 @@ namespace PingPongChamps
                 ison3 = false;
                 btn3.Text = "On";
                 btn3.BackColor = Color.Blue;
-                Wirepbs[2].BackColor = Color.Red;
+                Wirepbs[2].BackColor = Color.Blue;
             }
             else
             {
@@ -328,7 +377,7 @@ namespace PingPongChamps
                 ison3 = true;
                 btn3.Text = "Off";
                 btn3.BackColor = Color.Red;
-                Wirepbs[2].BackColor = Color.Blue;
+                Wirepbs[2].BackColor = Color.Red;
             }
         }
 
@@ -340,7 +389,7 @@ namespace PingPongChamps
                 ison4 = false;
                 btn4.Text = "On";
                 btn4.BackColor = Color.Blue;
-                Wirepbs[3].BackColor = Color.Red;
+                Wirepbs[3].BackColor = Color.Blue;
             }
             else
             {
@@ -348,7 +397,7 @@ namespace PingPongChamps
                 ison4 = true;
                 btn4.Text = "Off";
                 btn4.BackColor = Color.Red;
-                Wirepbs[3].BackColor = Color.Blue;
+                Wirepbs[3].BackColor = Color.Red;
             }
         }
 
@@ -360,7 +409,7 @@ namespace PingPongChamps
                 ison5 = false;
                 btn5.Text = "On";
                 btn5.BackColor = Color.Blue;
-                Wirepbs[4].BackColor = Color.Red;
+                Wirepbs[4].BackColor = Color.Blue;
             }
             else
             {
@@ -368,7 +417,7 @@ namespace PingPongChamps
                 ison5 = true;
                 btn5.Text = "Off";
                 btn5.BackColor = Color.Red;
-                Wirepbs[4].BackColor = Color.Blue;
+                Wirepbs[4].BackColor = Color.Red;
             }
         }
 
@@ -380,7 +429,7 @@ namespace PingPongChamps
                 ison6 = false;
                 btn6.Text = "On";
                 btn6.BackColor = Color.Blue;
-                Wirepbs[5].BackColor = Color.Red;
+                Wirepbs[5].BackColor = Color.Blue;
             }
             else
             {
@@ -388,7 +437,7 @@ namespace PingPongChamps
                 ison6 = true;
                 btn6.Text = "Off";
                 btn6.BackColor = Color.Red;
-                Wirepbs[5].BackColor = Color.Blue;
+                Wirepbs[5].BackColor = Color.Red;
             }
         }
 
@@ -400,7 +449,7 @@ namespace PingPongChamps
                 ison7 = false;
                 btn7.Text = "On";
                 btn7.BackColor = Color.Blue;
-                Wirepbs[6].BackColor = Color.Red;
+                Wirepbs[6].BackColor = Color.Blue;
             }
             else
             {
@@ -408,7 +457,7 @@ namespace PingPongChamps
                 ison7 = true;
                 btn7.Text = "Off";
                 btn7.BackColor = Color.Red;
-                Wirepbs[6].BackColor = Color.Blue;
+                Wirepbs[6].BackColor = Color.Red;
             }
         }
 
@@ -420,7 +469,7 @@ namespace PingPongChamps
                 ison8 = false;
                 btn8.Text = "On";
                 btn8.BackColor = Color.Blue;
-                Wirepbs[7].BackColor = Color.Red;
+                Wirepbs[7].BackColor = Color.Blue;
             }
             else
             {
@@ -428,7 +477,7 @@ namespace PingPongChamps
                 ison8 = true;
                 btn8.Text = "Off";
                 btn8.BackColor = Color.Red;
-                Wirepbs[7].BackColor = Color.Blue;
+                Wirepbs[7].BackColor = Color.Red;
             }
         }
 

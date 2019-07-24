@@ -14,10 +14,10 @@ namespace PingPongChamps
         {
             this.form1 = form1;
         }
-
+        bool on;
         public override void ToggleLine(bool on, int wire)
         {
-
+            this.on = on;
             this.inputs[wire] = on;
             if (on && form1.gamestart)
             {
@@ -26,15 +26,24 @@ namespace PingPongChamps
             }
             else if (on)
             {
-                form1.Randomize(form1.whatGates);
-            }
-            else
-            {
+                
 
             }
 
 
             //end game here - code not yet placed
+        }
+
+        public bool StillOn()
+        {
+            if (on)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

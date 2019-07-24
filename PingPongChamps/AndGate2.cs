@@ -20,10 +20,12 @@ namespace PingPongChamps
             next.ToggleLine((inputs[0] && inputs[1])? true : false, outWireNum);
             if (inputs[0] & inputs[1])
             {
-                outputPb.BackColor = System.Drawing.Color.Red;
-            }
-            {
+
                 outputPb.BackColor = System.Drawing.Color.Blue;
+            }
+            else
+            {
+                outputPb.BackColor = System.Drawing.Color.Red;
             }
         }
     }
