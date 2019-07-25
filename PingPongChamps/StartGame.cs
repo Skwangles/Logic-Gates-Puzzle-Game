@@ -24,9 +24,10 @@ namespace PingPongChamps
         {
 
             Form f = new Form1();
-            difficulty = listBox1.SelectedIndex;
+            difficulty = listBoxlvlselect.SelectedIndex;
+            
             f.ShowDialog();
-
+            
 
 
 
@@ -40,7 +41,7 @@ namespace PingPongChamps
 
         private void StartGame_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

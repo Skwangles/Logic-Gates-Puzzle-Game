@@ -28,72 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Startbtn = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.Diffucltylbl = new System.Windows.Forms.Label();
-            this.ExplainsLGbtn = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.listBoxlvlselect = new System.Windows.Forms.ListBox();
+            this.lblDiffucltylbl = new System.Windows.Forms.Label();
+            this.btnExplainsLGbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Startbtn
+            // btnStart
             // 
-            this.Startbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Startbtn.Location = new System.Drawing.Point(176, 12);
-            this.Startbtn.Name = "Startbtn";
-            this.Startbtn.Size = new System.Drawing.Size(76, 45);
-            this.Startbtn.TabIndex = 0;
-            this.Startbtn.Text = "Play";
-            this.Startbtn.UseVisualStyleBackColor = true;
-            this.Startbtn.Click += new System.EventHandler(this.Startbtn_Click);
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.Location = new System.Drawing.Point(176, 12);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(76, 45);
+            this.btnStart.TabIndex = 0;
+            this.btnStart.Text = "Play";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.Startbtn_Click);
             // 
-            // listBox1
+            // listBoxlvlselect
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Items.AddRange(new object[] {
+            this.listBoxlvlselect.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxlvlselect.FormattingEnabled = true;
+            this.listBoxlvlselect.ItemHeight = 25;
+            this.listBoxlvlselect.Items.AddRange(new object[] {
             "Level 1 - Or, And.",
             "Level 2 - Nor, Nand.",
             "Level 3 - Xnor, Xor."});
-            this.listBox1.Location = new System.Drawing.Point(124, 133);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(184, 79);
-            this.listBox1.TabIndex = 1;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBoxlvlselect.Location = new System.Drawing.Point(124, 133);
+            this.listBoxlvlselect.Name = "listBoxlvlselect";
+            this.listBoxlvlselect.Size = new System.Drawing.Size(184, 79);
+            this.listBoxlvlselect.TabIndex = 1;
+            this.listBoxlvlselect.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
-            // Diffucltylbl
+            // lblDiffucltylbl
             // 
-            this.Diffucltylbl.AutoSize = true;
-            this.Diffucltylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Diffucltylbl.Location = new System.Drawing.Point(180, 105);
-            this.Diffucltylbl.Name = "Diffucltylbl";
-            this.Diffucltylbl.Size = new System.Drawing.Size(84, 25);
-            this.Diffucltylbl.TabIndex = 2;
-            this.Diffucltylbl.Text = "Difficulty";
-            this.Diffucltylbl.Click += new System.EventHandler(this.label1_Click);
+            this.lblDiffucltylbl.AutoSize = true;
+            this.lblDiffucltylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiffucltylbl.Location = new System.Drawing.Point(180, 105);
+            this.lblDiffucltylbl.Name = "lblDiffucltylbl";
+            this.lblDiffucltylbl.Size = new System.Drawing.Size(84, 25);
+            this.lblDiffucltylbl.TabIndex = 2;
+            this.lblDiffucltylbl.Text = "Difficulty";
+            this.lblDiffucltylbl.Click += new System.EventHandler(this.label1_Click);
             // 
-            // ExplainsLGbtn
+            // btnExplainsLGbtn
             // 
-            this.ExplainsLGbtn.BackColor = System.Drawing.Color.Teal;
-            this.ExplainsLGbtn.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
-            this.ExplainsLGbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.ExplainsLGbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.ExplainsLGbtn.Location = new System.Drawing.Point(-4, 391);
-            this.ExplainsLGbtn.Name = "ExplainsLGbtn";
-            this.ExplainsLGbtn.Size = new System.Drawing.Size(467, 49);
-            this.ExplainsLGbtn.TabIndex = 3;
-            this.ExplainsLGbtn.Text = "Logic Gates Explained";
-            this.ExplainsLGbtn.UseVisualStyleBackColor = false;
-            this.ExplainsLGbtn.Click += new System.EventHandler(this.ExplainsLGbtn_Click);
+            this.btnExplainsLGbtn.BackColor = System.Drawing.Color.Teal;
+            this.btnExplainsLGbtn.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
+            this.btnExplainsLGbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnExplainsLGbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnExplainsLGbtn.Location = new System.Drawing.Point(-4, 391);
+            this.btnExplainsLGbtn.Name = "btnExplainsLGbtn";
+            this.btnExplainsLGbtn.Size = new System.Drawing.Size(467, 49);
+            this.btnExplainsLGbtn.TabIndex = 3;
+            this.btnExplainsLGbtn.Text = "Logic Gates Explained";
+            this.btnExplainsLGbtn.UseVisualStyleBackColor = false;
+            this.btnExplainsLGbtn.Click += new System.EventHandler(this.ExplainsLGbtn_Click);
             // 
             // StartGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 438);
-            this.Controls.Add(this.ExplainsLGbtn);
-            this.Controls.Add(this.Diffucltylbl);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.Startbtn);
+            this.Controls.Add(this.btnExplainsLGbtn);
+            this.Controls.Add(this.lblDiffucltylbl);
+            this.Controls.Add(this.listBoxlvlselect);
+            this.Controls.Add(this.btnStart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StartGame";
             this.Text = "StartGame";
@@ -105,9 +105,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Startbtn;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label Diffucltylbl;
-        private System.Windows.Forms.Button ExplainsLGbtn;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.ListBox listBoxlvlselect;
+        private System.Windows.Forms.Label lblDiffucltylbl;
+        private System.Windows.Forms.Button btnExplainsLGbtn;
     }
 }

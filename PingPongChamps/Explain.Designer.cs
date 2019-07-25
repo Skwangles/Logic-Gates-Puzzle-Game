@@ -28,118 +28,118 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblGatesText = new System.Windows.Forms.Label();
+            this.lblOrGate = new System.Windows.Forms.Label();
+            this.lblGateNames = new System.Windows.Forms.Label();
+            this.lblAndGate = new System.Windows.Forms.Label();
+            this.lblNandGate = new System.Windows.Forms.Label();
+            this.lblNorGate = new System.Windows.Forms.Label();
+            this.lblXorGate = new System.Windows.Forms.Label();
+            this.lblXnorGate = new System.Windows.Forms.Label();
+            this.lblWarning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblGatesText
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Minion Pro", 50F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 93);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Gates";
+            this.lblGatesText.AutoSize = true;
+            this.lblGatesText.Font = new System.Drawing.Font("Minion Pro", 50F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGatesText.Location = new System.Drawing.Point(12, 9);
+            this.lblGatesText.Name = "lblGatesText";
+            this.lblGatesText.Size = new System.Drawing.Size(197, 93);
+            this.lblGatesText.TabIndex = 0;
+            this.lblGatesText.Text = "Gates";
             // 
-            // label2
+            // lblOrGate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Outputs ON if either input is on";
+            this.lblOrGate.AutoSize = true;
+            this.lblOrGate.Location = new System.Drawing.Point(106, 156);
+            this.lblOrGate.Name = "lblOrGate";
+            this.lblOrGate.Size = new System.Drawing.Size(156, 13);
+            this.lblOrGate.TabIndex = 1;
+            this.lblOrGate.Text = "Output is ON if either input is on";
             // 
-            // label3
+            // lblGateNames
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 234);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Or\r\nAnd\r\nNand\r\nNor\r\nXor\r\nXnor\r\n";
+            this.lblGateNames.AutoSize = true;
+            this.lblGateNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGateNames.Location = new System.Drawing.Point(1, 136);
+            this.lblGateNames.Name = "lblGateNames";
+            this.lblGateNames.Size = new System.Drawing.Size(99, 234);
+            this.lblGateNames.TabIndex = 2;
+            this.lblGateNames.Text = "Or\r\nAnd\r\nNand\r\nNor\r\nXor\r\nXnor\r\n";
             // 
-            // label4
+            // lblAndGate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(106, 190);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Outputs ON if both inputs are on.";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.lblAndGate.AutoSize = true;
+            this.lblAndGate.Location = new System.Drawing.Point(106, 190);
+            this.lblAndGate.Name = "lblAndGate";
+            this.lblAndGate.Size = new System.Drawing.Size(167, 13);
+            this.lblAndGate.TabIndex = 3;
+            this.lblAndGate.Text = "Output is ON if both inputs are on.";
+            this.lblAndGate.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
+            // lblNandGate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(106, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Outputs ON if both inputs are NOT on.";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblNandGate.AutoSize = true;
+            this.lblNandGate.Location = new System.Drawing.Point(106, 231);
+            this.lblNandGate.Name = "lblNandGate";
+            this.lblNandGate.Size = new System.Drawing.Size(193, 13);
+            this.lblNandGate.TabIndex = 4;
+            this.lblNandGate.Text = "Output is ON if both inputs are NOT on.";
+            this.lblNandGate.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label6
+            // lblNorGate
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(106, 271);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Outputs ON if no inputs are on.";
+            this.lblNorGate.AutoSize = true;
+            this.lblNorGate.Location = new System.Drawing.Point(106, 271);
+            this.lblNorGate.Name = "lblNorGate";
+            this.lblNorGate.Size = new System.Drawing.Size(158, 13);
+            this.lblNorGate.TabIndex = 5;
+            this.lblNorGate.Text = "Output is ON if no inputs are on.";
             // 
-            // label7
+            // lblXorGate
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(106, 310);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Outputs ON if only 1 input is on.\r\n";
+            this.lblXorGate.AutoSize = true;
+            this.lblXorGate.Location = new System.Drawing.Point(106, 310);
+            this.lblXorGate.Name = "lblXorGate";
+            this.lblXorGate.Size = new System.Drawing.Size(161, 13);
+            this.lblXorGate.TabIndex = 6;
+            this.lblXorGate.Text = "Output is ON if only 1 input is on.\r\n";
             // 
-            // label8
+            // lblXnorGate
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(106, 346);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(194, 26);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Outputs ON if either, both inputs are on,\r\n or none.\r\n";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.lblXnorGate.AutoSize = true;
+            this.lblXnorGate.Location = new System.Drawing.Point(106, 346);
+            this.lblXnorGate.Name = "lblXnorGate";
+            this.lblXnorGate.Size = new System.Drawing.Size(199, 26);
+            this.lblXnorGate.TabIndex = 7;
+            this.lblXnorGate.Text = "Output is ON if either, both inputs are on,\r\n or none.\r\n";
+            this.lblXnorGate.Click += new System.EventHandler(this.label8_Click);
             // 
-            // label10
+            // lblWarning
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(25, 89);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(167, 26);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Warning: Will close on Game start\r\n\r\n";
+            this.lblWarning.AutoSize = true;
+            this.lblWarning.ForeColor = System.Drawing.Color.Red;
+            this.lblWarning.Location = new System.Drawing.Point(25, 89);
+            this.lblWarning.Name = "lblWarning";
+            this.lblWarning.Size = new System.Drawing.Size(0, 13);
+            this.lblWarning.TabIndex = 9;
+            this.lblWarning.Click += new System.EventHandler(this.label10_Click);
             // 
             // Explain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(308, 394);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblWarning);
+            this.Controls.Add(this.lblXnorGate);
+            this.Controls.Add(this.lblXorGate);
+            this.Controls.Add(this.lblNorGate);
+            this.Controls.Add(this.lblNandGate);
+            this.Controls.Add(this.lblAndGate);
+            this.Controls.Add(this.lblGateNames);
+            this.Controls.Add(this.lblOrGate);
+            this.Controls.Add(this.lblGatesText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Explain";
             this.Text = "Explain";
@@ -151,14 +151,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblGatesText;
+        private System.Windows.Forms.Label lblOrGate;
+        private System.Windows.Forms.Label lblGateNames;
+        private System.Windows.Forms.Label lblAndGate;
+        private System.Windows.Forms.Label lblNandGate;
+        private System.Windows.Forms.Label lblNorGate;
+        private System.Windows.Forms.Label lblXorGate;
+        private System.Windows.Forms.Label lblXnorGate;
+        private System.Windows.Forms.Label lblWarning;
     }
 }

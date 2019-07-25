@@ -46,28 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AndGate.cs" />
+    <Compile Include="AndGate.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="AndGate2.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ButtonPress.cs" />
-    <Compile Include="End.cs" />
+    <Compile Include="End.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Explain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Explain.Designer.cs">
       <DependentUpon>Explain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="X:\Backups\Form1.cs">
       <SubType>Form</SubType>
+      <Link>Form1.cs</Link>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="X:\Backups\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+      <Link>Form1.Designer.cs</Link>
     </Compile>
-    <Compile Include="Gate.cs" />
-    <Compile Include="Nand.cs" />
-    <Compile Include="NorGate.cs" />
-    <Compile Include="OrGate.cs" />
+    <Compile Include="Gate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Nand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NorGate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrGate.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StartGame.cs">
@@ -76,14 +90,21 @@
     <Compile Include="StartGame.Designer.cs">
       <DependentUpon>StartGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wire.cs" />
-    <Compile Include="XnorGate.cs" />
-    <Compile Include="XorGate.cs" />
+    <Compile Include="Wire.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XnorGate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XorGate.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Explain.resx">
       <DependentUpon>Explain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="X:\Backups\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <Link>Form1.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
