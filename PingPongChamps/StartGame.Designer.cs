@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 438);
+            this.ClientSize = new System.Drawing.Size(463, 440);
             this.Controls.Add(this.btnExplainsLGbtn);
             this.Controls.Add(this.lblDiffucltylbl);
             this.Controls.Add(this.listBoxlvlselect);

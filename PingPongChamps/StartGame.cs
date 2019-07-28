@@ -22,11 +22,12 @@ namespace PingPongChamps
 
         private void Startbtn_Click(object sender, EventArgs e)
         {
-
-            Form f = new Form1();
-            difficulty = listBoxlvlselect.SelectedIndex;
+            Form1 f = new Form1();
+            Form a = new Instructions(f);
             
-            f.ShowDialog();
+            difficulty = listBoxlvlselect.SelectedIndex;
+            a.ShowDialog();
+           
             
 
 
