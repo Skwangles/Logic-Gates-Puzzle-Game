@@ -68,6 +68,11 @@
     <Compile Include="Instructions.Designer.cs">
       <DependentUpon>Instructions.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="X:\Backups\Form1.cs">
       <SubType>Form</SubType>
       <Link>Form1.cs</Link>
@@ -111,6 +116,10 @@
     <EmbeddedResource Include="Instructions.resx">
       <DependentUpon>Instructions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="X:\Backups\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
       <Link>Form1.resx</Link>
@@ -146,6 +155,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ImprovedBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnWire.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OffWire.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
