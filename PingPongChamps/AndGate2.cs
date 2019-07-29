@@ -21,11 +21,11 @@ namespace PingPongChamps
             if (inputs[0] & inputs[1])
             {
 
-                outputPb.BackColor = System.Drawing.Color.Blue;
+                outputPb.BackgroundImage = Form1.WireImg[0];
             }
             else
             {
-                outputPb.BackColor = System.Drawing.Color.Red;
+                outputPb.BackgroundImage = Form1.WireImg[1];
             }
         }
     }

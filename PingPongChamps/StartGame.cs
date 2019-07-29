@@ -14,7 +14,7 @@ namespace PingPongChamps
     {
         Form o = new Explain();
         public static int difficulty;
-
+        int secondTimeRound = 0;
         public StartGame()
         {
             InitializeComponent();
@@ -23,15 +23,19 @@ namespace PingPongChamps
         private void Startbtn_Click(object sender, EventArgs e)
         {
             Form1 f = new Form1();
-            Form a = new Instructions(f);
-            
+   
             difficulty = listBoxlvlselect.SelectedIndex;
-            a.ShowDialog();
-           
-            
 
-
-
+            if (secondTimeRound == 0)
+            {
+                Form a = new Instructions(f);
+                a.ShowDialog();
+            }
+            else
+            {
+                f.ShowDialog();
+            }
+            secondTimeRound++;
 
         }
 

@@ -162,5 +162,14 @@
   <ItemGroup>
     <None Include="Resources\OffWire.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OffWire1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnWire1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SnapshotWireGame.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

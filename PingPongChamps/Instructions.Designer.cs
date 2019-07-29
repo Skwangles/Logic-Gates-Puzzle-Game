@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Instructions));
             this.lblinfotxt = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblInfortxt2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,33 +37,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblinfotxt
             // 
             this.lblinfotxt.AutoSize = true;
-            this.lblinfotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblinfotxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblinfotxt.Location = new System.Drawing.Point(12, 9);
             this.lblinfotxt.Name = "lblinfotxt";
-            this.lblinfotxt.Size = new System.Drawing.Size(464, 187);
+            this.lblinfotxt.Size = new System.Drawing.Size(654, 117);
             this.lblinfotxt.TabIndex = 0;
             this.lblinfotxt.Text = resources.GetString("lblinfotxt.Text");
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::PingPongChamps.Properties.Resources.Capture;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 155);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 283);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lblInfortxt2
             // 
             this.lblInfortxt2.AutoSize = true;
-            this.lblInfortxt2.Location = new System.Drawing.Point(297, 250);
+            this.lblInfortxt2.Location = new System.Drawing.Point(274, 241);
             this.lblInfortxt2.Name = "lblInfortxt2";
             this.lblInfortxt2.Size = new System.Drawing.Size(292, 78);
             this.lblInfortxt2.TabIndex = 4;
@@ -74,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(153, 175);
+            this.label1.Location = new System.Drawing.Point(42, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 5;
@@ -92,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(213, 410);
+            this.label3.Location = new System.Drawing.Point(115, 428);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 7;
@@ -101,7 +91,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(153, 285);
+            this.label4.Location = new System.Drawing.Point(167, 276);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 8;
@@ -110,7 +100,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 213);
+            this.label5.Location = new System.Drawing.Point(79, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 9;
@@ -127,6 +117,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::PingPongChamps.Properties.Resources.SnapshotWireGame;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 155);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 283);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Instructions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,7 +142,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblinfotxt);
             this.Name = "Instructions";
-            this.Text = "Instructions";
+            this.Text = "Game Instructions";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

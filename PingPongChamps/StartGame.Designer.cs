@@ -96,7 +96,7 @@
             this.Controls.Add(this.btnStart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "StartGame";
-            this.Text = "StartGame";
+            this.Text = "Logic Gates Game";
             this.Load += new System.EventHandler(this.StartGame_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

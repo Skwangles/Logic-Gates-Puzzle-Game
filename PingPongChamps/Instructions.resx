@@ -120,18 +120,16 @@
   <data name="lblinfotxt.Text" xml:space="preserve">
     <value>Aim of the game:
 To light up a light bulb at the top of the chain of Logic Gates.
-This is by turning ON or OFF buttons at the bottom to change the inputs,
- into the bottom of the logic gates.
- As each Logic Gate has 1 output, and the output being ON or OFF, 
-depends on the way the type of Logic Gate decides if it is ON or OFF,
+This is by turning ON or OFF buttons at the bottom to change the inputs going into the bottom of the logic gates.
+ As each Logic Gate has 1 output, and the output being ON or OFF depends on the way the type of Logic Gate decides if it is ON or OFF,
  based on the combination of inputs ON. 
-example: And gate will only have its output ON if both Inputs are on.
+example: An OR gate will have its output ON if ANY Inputs are on.
 
-Blue means wire is ON.
-Red means wire is OFF.</value>
+Blue striped wire = ON
+Black &amp; Gray Striped Wire= OFF</value>
   </data>
   <data name="lblInfortxt2.Text" xml:space="preserve">
-    <value>Example(Right):
+    <value>Example(Left):
 By alternating which buttons are ON or OFF, it will turn
 the gates connected to the wires ON or OFF, 
 based on what type of Logic Gate it is.
