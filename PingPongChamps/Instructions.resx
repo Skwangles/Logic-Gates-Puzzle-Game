@@ -126,7 +126,7 @@ This is by turning ON or OFF buttons at the bottom to change the inputs going in
 example: An OR gate will have its output ON if ANY Inputs are on.
 
 Blue striped wire = ON
-Black &amp; Gray Striped Wire= OFF</value>
+Black and Gray Striped Wire= OFF</value>
   </data>
   <data name="lblInfortxt2.Text" xml:space="preserve">
     <value>Example(Left):

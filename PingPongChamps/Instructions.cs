@@ -15,9 +15,11 @@ namespace PingPongChamps
         Form1 g;
        
         public Instructions(Form1 form1)
-        {          
+        {
             g = form1;
+
             InitializeComponent();
+            HideButton();
         }  
        
         private void label4_Click(object sender, EventArgs e)
@@ -25,11 +27,36 @@ namespace PingPongChamps
 
         }
 
+        private void HideButton()
+        {
+            if (g == null)
+            {
+                continueButton.Hide();
+            }
+            else
+            {
+                continueButton.Show();
+                
+            }
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
             g.ShowDialog();
            
+        }
+
+      
+        
+        private void Instructions_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblinfotxt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

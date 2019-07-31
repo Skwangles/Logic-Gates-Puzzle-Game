@@ -13,6 +13,8 @@ namespace PingPongChamps
     public partial class StartGame : Form
     {
         Form o = new Explain();
+        Form1 f = new Form1();
+       
         public static int difficulty;
         int secondTimeRound = 0;
         public StartGame()
@@ -22,18 +24,22 @@ namespace PingPongChamps
 
         private void Startbtn_Click(object sender, EventArgs e)
         {
-            Form1 f = new Form1();
-   
+
+            Form a = new Instructions(f);
+            if (listBoxlvlselect.SelectedItem == null)
+            {
+                MessageBox.Show("Please Select a Level",null);
+            }
             difficulty = listBoxlvlselect.SelectedIndex;
 
             if (secondTimeRound == 0)
             {
-                Form a = new Instructions(f);
+               
                 a.ShowDialog();
             }
             else
             {
-                f.ShowDialog();
+                a.ShowDialog();
             }
             secondTimeRound++;
 
@@ -46,7 +52,7 @@ namespace PingPongChamps
 
         private void StartGame_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,6 +64,13 @@ namespace PingPongChamps
         {
 
             o.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form b = new Instructions(null);
+            b.ShowDialog();
+            secondTimeRound++;
         }
     }
 }

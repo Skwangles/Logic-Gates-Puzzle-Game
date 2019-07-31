@@ -32,6 +32,7 @@
             this.listBoxlvlselect = new System.Windows.Forms.ListBox();
             this.lblDiffucltylbl = new System.Windows.Forms.Label();
             this.btnExplainsLGbtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnStart
@@ -74,27 +75,41 @@
             // btnExplainsLGbtn
             // 
             this.btnExplainsLGbtn.BackColor = System.Drawing.Color.Teal;
+            this.btnExplainsLGbtn.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnExplainsLGbtn.FlatAppearance.BorderColor = System.Drawing.Color.Teal;
             this.btnExplainsLGbtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btnExplainsLGbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnExplainsLGbtn.Location = new System.Drawing.Point(-4, 391);
+            this.btnExplainsLGbtn.Location = new System.Drawing.Point(0, 0);
             this.btnExplainsLGbtn.Name = "btnExplainsLGbtn";
-            this.btnExplainsLGbtn.Size = new System.Drawing.Size(467, 49);
+            this.btnExplainsLGbtn.Size = new System.Drawing.Size(79, 440);
             this.btnExplainsLGbtn.TabIndex = 3;
             this.btnExplainsLGbtn.Text = "Logic Gates Explained";
             this.btnExplainsLGbtn.UseVisualStyleBackColor = false;
             this.btnExplainsLGbtn.Click += new System.EventHandler(this.ExplainsLGbtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.RosyBrown;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Location = new System.Drawing.Point(384, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 440);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Game Instructions";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StartGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 440);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExplainsLGbtn);
             this.Controls.Add(this.lblDiffucltylbl);
             this.Controls.Add(this.listBoxlvlselect);
             this.Controls.Add(this.btnStart);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "StartGame";
             this.Text = "Logic Gates Game";
             this.Load += new System.EventHandler(this.StartGame_Load);
@@ -109,5 +124,6 @@
         private System.Windows.Forms.ListBox listBoxlvlselect;
         private System.Windows.Forms.Label lblDiffucltylbl;
         private System.Windows.Forms.Button btnExplainsLGbtn;
+        private System.Windows.Forms.Button button1;
     }
 }
