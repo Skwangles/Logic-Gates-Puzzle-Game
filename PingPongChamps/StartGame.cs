@@ -39,7 +39,7 @@ namespace PingPongChamps
             }
             else
             {
-                a.ShowDialog();
+                f.ShowDialog();
             }
             secondTimeRound++;
 

@@ -83,9 +83,29 @@ namespace PingPongChamps.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OffBulb {
+            get {
+                object obj = ResourceManager.GetObject("OffBulb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OffWire {
             get {
                 object obj = ResourceManager.GetObject("OffWire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OnBulb {
+            get {
+                object obj = ResourceManager.GetObject("OnBulb", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -171,5 +171,11 @@
   <ItemGroup>
     <None Include="Resources\SnapshotWireGame.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OffBulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OnBulb.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
