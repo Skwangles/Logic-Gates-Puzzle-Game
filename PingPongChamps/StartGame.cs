@@ -13,8 +13,7 @@ namespace PingPongChamps
     public partial class StartGame : Form
     {
         Form o = new Explain();
-        Form1 f = new Form1();
-       
+
         public static int difficulty;
         int secondTimeRound = 0;
         public StartGame()
@@ -24,7 +23,8 @@ namespace PingPongChamps
 
         private void Startbtn_Click(object sender, EventArgs e)
         {
-
+           
+            Form1 f = new Form1();
             Form a = new Instructions(f);
             if (listBoxlvlselect.SelectedItem == null)
             {
