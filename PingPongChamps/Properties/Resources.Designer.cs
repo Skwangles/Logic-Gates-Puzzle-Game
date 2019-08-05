@@ -83,6 +83,16 @@ namespace PingPongChamps.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nap_shop_again {
+            get {
+                object obj = ResourceManager.GetObject("Nap shop again", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap OffBulb {
             get {
                 object obj = ResourceManager.GetObject("OffBulb", resourceCulture);

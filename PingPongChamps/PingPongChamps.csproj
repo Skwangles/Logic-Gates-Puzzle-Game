@@ -177,5 +177,8 @@
   <ItemGroup>
     <None Include="Resources\OnBulb.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nap shop again.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

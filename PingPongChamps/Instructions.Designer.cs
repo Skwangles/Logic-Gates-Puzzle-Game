@@ -74,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(166, 347);
+            this.label2.Location = new System.Drawing.Point(166, 369);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 6;
@@ -92,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 276);
+            this.label4.Location = new System.Drawing.Point(151, 277);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 8;
@@ -101,7 +101,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 205);
+            this.label5.Location = new System.Drawing.Point(86, 212);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 9;
@@ -120,7 +120,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::PingPongChamps.Properties.Resources.SnapshotWireGame;
+            this.pictureBox1.BackgroundImage = global::PingPongChamps.Properties.Resources.Nap_shop_again;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 158);
             this.pictureBox1.Name = "pictureBox1";

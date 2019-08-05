@@ -23,26 +23,28 @@ namespace PingPongChamps
 
         private void Startbtn_Click(object sender, EventArgs e)
         {
-           
+
             Form1 f = new Form1();
             Form a = new Instructions(f);
             if (listBoxlvlselect.SelectedItem == null)
             {
-                MessageBox.Show("Please Select a Level",null);
-            }
-            difficulty = listBoxlvlselect.SelectedIndex;
-
-            if (secondTimeRound == 0)
-            {
-               
-                a.ShowDialog();
+                MessageBox.Show("Please Select a Level", null);
             }
             else
             {
-                f.ShowDialog();
-            }
-            secondTimeRound++;
+                difficulty = listBoxlvlselect.SelectedIndex;
 
+                if (secondTimeRound == 0)
+                {
+
+                    a.ShowDialog();
+                }
+                else
+                {
+                    f.ShowDialog();
+                }
+                secondTimeRound++;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace PingPongChamps
 
         private void StartGame_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
