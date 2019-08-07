@@ -34,8 +34,13 @@
             this.btnExplainsLGbtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblhighscoretxt = new System.Windows.Forms.Label();
-            this.lblhighscorenum = new System.Windows.Forms.Label();
+            this.lbllvl1num = new System.Windows.Forms.Label();
             this.pbhighscorebckgrnd = new System.Windows.Forms.PictureBox();
+            this.lblLvl2num = new System.Windows.Forms.Label();
+            this.lblLvl3num = new System.Windows.Forms.Label();
+            this.lbllvl1txt = new System.Windows.Forms.Label();
+            this.lbllvl2txt = new System.Windows.Forms.Label();
+            this.lblLvl3txt = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbhighscorebckgrnd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,36 +118,92 @@
             this.lblhighscoretxt.TabIndex = 5;
             this.lblhighscoretxt.Text = "Highscore:";
             // 
-            // lblhighscorenum
+            // lbllvl1num
             // 
-            this.lblhighscorenum.AutoSize = true;
-            this.lblhighscorenum.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhighscorenum.Location = new System.Drawing.Point(189, 319);
-            this.lblhighscorenum.Name = "lblhighscorenum";
-            this.lblhighscorenum.Size = new System.Drawing.Size(0, 31);
-            this.lblhighscorenum.TabIndex = 6;
+            this.lbllvl1num.AutoSize = true;
+            this.lbllvl1num.BackColor = System.Drawing.Color.White;
+            this.lbllvl1num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllvl1num.Location = new System.Drawing.Point(201, 308);
+            this.lbllvl1num.Name = "lbllvl1num";
+            this.lbllvl1num.Size = new System.Drawing.Size(60, 31);
+            this.lbllvl1num.TabIndex = 6;
+            this.lbllvl1num.Text = "N/A";
             // 
             // pbhighscorebckgrnd
             // 
             this.pbhighscorebckgrnd.BackColor = System.Drawing.Color.White;
-            this.pbhighscorebckgrnd.Location = new System.Drawing.Point(112, 296);
+            this.pbhighscorebckgrnd.Location = new System.Drawing.Point(166, 296);
             this.pbhighscorebckgrnd.Name = "pbhighscorebckgrnd";
-            this.pbhighscorebckgrnd.Size = new System.Drawing.Size(207, 82);
+            this.pbhighscorebckgrnd.Size = new System.Drawing.Size(98, 132);
             this.pbhighscorebckgrnd.TabIndex = 7;
             this.pbhighscorebckgrnd.TabStop = false;
+            // 
+            // lblLvl2num
+            // 
+            this.lblLvl2num.AutoSize = true;
+            this.lblLvl2num.BackColor = System.Drawing.Color.White;
+            this.lblLvl2num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLvl2num.Location = new System.Drawing.Point(201, 349);
+            this.lblLvl2num.Name = "lblLvl2num";
+            this.lblLvl2num.Size = new System.Drawing.Size(60, 31);
+            this.lblLvl2num.TabIndex = 8;
+            this.lblLvl2num.Text = "N/A";
+            // 
+            // lblLvl3num
+            // 
+            this.lblLvl3num.AutoSize = true;
+            this.lblLvl3num.BackColor = System.Drawing.Color.White;
+            this.lblLvl3num.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLvl3num.Location = new System.Drawing.Point(201, 394);
+            this.lblLvl3num.Name = "lblLvl3num";
+            this.lblLvl3num.Size = new System.Drawing.Size(60, 31);
+            this.lblLvl3num.TabIndex = 9;
+            this.lblLvl3num.Text = "N/A";
+            // 
+            // lbllvl1txt
+            // 
+            this.lbllvl1txt.AutoSize = true;
+            this.lbllvl1txt.Location = new System.Drawing.Point(130, 308);
+            this.lbllvl1txt.Name = "lbllvl1txt";
+            this.lbllvl1txt.Size = new System.Drawing.Size(30, 13);
+            this.lbllvl1txt.TabIndex = 10;
+            this.lbllvl1txt.Text = "Lvl 1";
+            // 
+            // lbllvl2txt
+            // 
+            this.lbllvl2txt.AutoSize = true;
+            this.lbllvl2txt.Location = new System.Drawing.Point(130, 364);
+            this.lbllvl2txt.Name = "lbllvl2txt";
+            this.lbllvl2txt.Size = new System.Drawing.Size(30, 13);
+            this.lbllvl2txt.TabIndex = 11;
+            this.lbllvl2txt.Text = "Lvl 2";
+            // 
+            // lblLvl3txt
+            // 
+            this.lblLvl3txt.AutoSize = true;
+            this.lblLvl3txt.Location = new System.Drawing.Point(130, 412);
+            this.lblLvl3txt.Name = "lblLvl3txt";
+            this.lblLvl3txt.Size = new System.Drawing.Size(30, 13);
+            this.lblLvl3txt.TabIndex = 12;
+            this.lblLvl3txt.Text = "Lvl 3";
             // 
             // StartGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 440);
+            this.Controls.Add(this.lblLvl3txt);
+            this.Controls.Add(this.lbllvl2txt);
+            this.Controls.Add(this.lbllvl1txt);
+            this.Controls.Add(this.lblLvl3num);
+            this.Controls.Add(this.lblLvl2num);
             this.Controls.Add(this.lblhighscoretxt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExplainsLGbtn);
             this.Controls.Add(this.lblDiffucltylbl);
             this.Controls.Add(this.listBoxlvlselect);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.lblhighscorenum);
+            this.Controls.Add(this.lbllvl1num);
             this.Controls.Add(this.pbhighscorebckgrnd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "StartGame";
@@ -162,7 +223,12 @@
         private System.Windows.Forms.Button btnExplainsLGbtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblhighscoretxt;
-        private System.Windows.Forms.Label lblhighscorenum;
+        private System.Windows.Forms.Label lbllvl1num;
         private System.Windows.Forms.PictureBox pbhighscorebckgrnd;
+        private System.Windows.Forms.Label lblLvl2num;
+        private System.Windows.Forms.Label lblLvl3num;
+        private System.Windows.Forms.Label lbllvl1txt;
+        private System.Windows.Forms.Label lbllvl2txt;
+        private System.Windows.Forms.Label lblLvl3txt;
     }
 }

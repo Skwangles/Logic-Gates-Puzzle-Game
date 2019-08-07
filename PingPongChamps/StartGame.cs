@@ -13,7 +13,8 @@ namespace PingPongChamps
     public partial class StartGame : Form
     {
         Form o = new Explain();
-        public static int highscore = 0;
+       
+        public static int[] highscores = new int[3];
         public static int difficulty;
         int secondTimeRound = 0;
         public StartGame()
@@ -47,9 +48,20 @@ namespace PingPongChamps
                 secondTimeRound++;
             }
         }
-        public string SetHighscore
+        public string SetHighScore1
         {
-            set { lblhighscorenum.Text = value; }
+         
+            set { lbllvl1num.Text = value; }
+        }
+        public string SetHighScore2
+        {
+          
+            set { lblLvl2num.Text = value; }
+        }
+        public string SetHighScore3
+        {
+            
+            set { lblLvl3num.Text = value; }
         }
 
         private void label1_Click(object sender, EventArgs e)
