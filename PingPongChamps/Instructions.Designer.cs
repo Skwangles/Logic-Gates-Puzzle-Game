@@ -120,7 +120,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::PingPongChamps.Properties.Resources.Nap_shop_again;
+            this.pictureBox1.BackgroundImage = global::PingPongChamps.Properties.Resources.Napshopagain;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 158);
             this.pictureBox1.Name = "pictureBox1";

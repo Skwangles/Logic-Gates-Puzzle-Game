@@ -73,6 +73,26 @@ namespace PingPongChamps.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GameAim1 {
+            get {
+                object obj = ResourceManager.GetObject("GameAim1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GatesExplained {
+            get {
+                object obj = ResourceManager.GetObject("GatesExplained", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ImprovedBackground {
             get {
                 object obj = ResourceManager.GetObject("ImprovedBackground", resourceCulture);
@@ -83,9 +103,9 @@ namespace PingPongChamps.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Nap_shop_again {
+        internal static System.Drawing.Bitmap Napshopagain {
             get {
-                object obj = ResourceManager.GetObject("Nap shop again", resourceCulture);
+                object obj = ResourceManager.GetObject("Napshopagain", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +153,9 @@ namespace PingPongChamps.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SnapshotWireGame {
+        internal static System.Drawing.Bitmap Startgamebckgrndmark3 {
             get {
-                object obj = ResourceManager.GetObject("SnapshotWireGame", resourceCulture);
+                object obj = ResourceManager.GetObject("Startgamebckgrndmark3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
