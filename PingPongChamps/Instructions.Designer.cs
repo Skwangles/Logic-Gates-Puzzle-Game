@@ -142,7 +142,8 @@
             this.Controls.Add(this.lblInfortxt2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblinfotxt);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Instructions";
             this.Text = "Game Instructions";
             this.Load += new System.EventHandler(this.Instructions_Load);

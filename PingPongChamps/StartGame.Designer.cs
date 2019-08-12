@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartGame));
             this.btnStart = new System.Windows.Forms.Button();
             this.listBoxlvlselect = new System.Windows.Forms.ListBox();
             this.lblDiffucltylbl = new System.Windows.Forms.Label();
@@ -45,9 +46,9 @@
             // btnStart
             // 
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.Location = new System.Drawing.Point(185, 37);
+            this.btnStart.Location = new System.Drawing.Point(185, 41);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(79, 53);
+            this.btnStart.Size = new System.Drawing.Size(79, 40);
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Play";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -186,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PingPongChamps.Properties.Resources.Startgamebckgrndmark3;
+            this.BackgroundImage = global::PingPongChamps.Properties.Resources.Startgamebckgrnd;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(463, 440);
             this.Controls.Add(this.lblLvl3txt);
@@ -201,7 +202,8 @@
             this.Controls.Add(this.listBoxlvlselect);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.lbllvl1num);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartGame";
             this.Text = "Logic Gates Game";
             this.Load += new System.EventHandler(this.StartGame_Load);

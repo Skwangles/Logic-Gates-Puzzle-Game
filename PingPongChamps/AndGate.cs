@@ -20,11 +20,11 @@ namespace PingPongChamps
             if (inputs[0] & inputs[1])
             {
 
-                outputPb.BackgroundImage = Form1.WireImg[0];//Changes wire image based on state
+                outputPb.BackgroundImage = Form1.wireImg[0];//Changes wire image based on state
             }
             else
             {
-                outputPb.BackgroundImage = Form1.WireImg[1];
+                outputPb.BackgroundImage = Form1.wireImg[1];
             }
         }
     }

@@ -12,7 +12,7 @@ namespace PingPongChamps
 {
     public partial class StartGame : Form
     {
-        Form o = new Explain();
+        Form winFormGatesExplain = new Explain();
        
         public static int[] highscores = new int[3]; //Highscore and Difficulty values so that all methods can reach it.
         public static int difficulty;
@@ -24,10 +24,9 @@ namespace PingPongChamps
 
         private void Startbtn_Click(object sender, EventArgs e)
         {
-
-            Form1 f = new Form1();//Sets the instances of each window
-            Form a = new Instructions(f); //Sets the playing instance of Instructions which has the Continue button
-            f.StartGameSet = this;//Sets the Form1 f Instance for other methods
+            Form1 winForm1 = new Form1();//Sets the instances of each window
+            Form winFormInstruction = new Instructions(winForm1); //Sets the playing instance of Instructions which has the Continue button
+            winForm1.StartGameSet = this;//Sets the Form1 f Instance for other methods
             if (listBoxlvlselect.SelectedItem == null)
             {
                 MessageBox.Show("Please Select a Level", null); //Sets the messagebox values
@@ -39,11 +38,11 @@ namespace PingPongChamps
                 if (secondTimeRound == 0)//Disables the instructions screen for second time playing a round. So that it is not annoying the player
                 {
 
-                    a.ShowDialog();
+                    winFormInstruction.ShowDialog();
                 }
                 else
                 {
-                    f.ShowDialog();
+                    winForm1.ShowDialog();
                 }
                 secondTimeRound++;
             }
@@ -53,12 +52,12 @@ namespace PingPongChamps
          
             set { lbllvl1num.Text = value; }//Getter/setter for the text of the highscore lbls
         }
-        public string SetHighScore2
+        public string SetHighScore2//^
         {
           
             set { lblLvl2num.Text = value; }
         }
-        public string SetHighScore3
+        public string SetHighScore3//^
         {
             
             set { lblLvl3num.Text = value; }
@@ -82,7 +81,7 @@ namespace PingPongChamps
         private void ExplainsLGbtn_Click(object sender, EventArgs e)
         {
 
-            o.ShowDialog();
+            winFormGatesExplain.ShowDialog();//Opens the gates explain window.
         }
 
         private void button1_Click(object sender, EventArgs e)

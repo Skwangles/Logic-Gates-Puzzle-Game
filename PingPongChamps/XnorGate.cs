@@ -19,10 +19,10 @@ namespace PingPongChamps
             next.ToggleLine((inputs[0] && inputs[1]) || (inputs[0] == false && inputs[1] == false), outWireNum);
             if ((inputs[0] && inputs[1]) || (inputs[0] == false && inputs[1] == false))
             {               
-                outputPb.BackgroundImage = Form1.WireImg[0];
+                outputPb.BackgroundImage = Form1.wireImg[0];
             }
             else {
-                outputPb.BackgroundImage = Form1.WireImg[1];
+                outputPb.BackgroundImage = Form1.wireImg[1];
             }
         }
     }

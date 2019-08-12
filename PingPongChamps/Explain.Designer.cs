@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Explain));
             this.lblGatesText = new System.Windows.Forms.Label();
             this.lblOrGate = new System.Windows.Forms.Label();
             this.lblGateNames = new System.Windows.Forms.Label();
@@ -83,9 +84,9 @@
             this.lblNandGate.AutoSize = true;
             this.lblNandGate.Location = new System.Drawing.Point(106, 231);
             this.lblNandGate.Name = "lblNandGate";
-            this.lblNandGate.Size = new System.Drawing.Size(193, 13);
+            this.lblNandGate.Size = new System.Drawing.Size(181, 13);
             this.lblNandGate.TabIndex = 4;
-            this.lblNandGate.Text = "Output is ON if both inputs are NOT on.";
+            this.lblNandGate.Text = "Output is ON if 1 input is on, or none.\r\n";
             this.lblNandGate.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblNorGate
@@ -141,6 +142,7 @@
             this.Controls.Add(this.lblOrGate);
             this.Controls.Add(this.lblGatesText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Explain";
             this.Text = "Explain";
             this.Load += new System.EventHandler(this.Explain_Load);
