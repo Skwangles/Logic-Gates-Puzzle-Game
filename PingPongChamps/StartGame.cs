@@ -25,12 +25,12 @@ namespace PingPongChamps
         private void Startbtn_Click(object sender, EventArgs e)
         {
 
-            Form1 f = new Form1();
+            Form1 f = new Form1();//Sets the instances of each window
             Form a = new Instructions(f);
             f.StartGameSet = this;
             if (listBoxlvlselect.SelectedItem == null)
             {
-                MessageBox.Show("Please Select a Level", null);
+                MessageBox.Show("Please Select a Level", null); //Sets the m
             }
             else
             {
