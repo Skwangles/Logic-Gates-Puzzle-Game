@@ -14,7 +14,7 @@ namespace PingPongChamps
     {
         Form o = new Explain();
        
-        public static int[] highscores = new int[3];
+        public static int[] highscores = new int[3]; //Highscore and Difficulty values so that all methods can reach it.
         public static int difficulty;
         int secondTimeRound = 0;
         public StartGame()
@@ -26,17 +26,17 @@ namespace PingPongChamps
         {
 
             Form1 f = new Form1();//Sets the instances of each window
-            Form a = new Instructions(f);
-            f.StartGameSet = this;
+            Form a = new Instructions(f); //Sets the playing instance of Instructions which has the Continue button
+            f.StartGameSet = this;//Sets the Form1 f Instance for other methods
             if (listBoxlvlselect.SelectedItem == null)
             {
-                MessageBox.Show("Please Select a Level", null); //Sets the m
+                MessageBox.Show("Please Select a Level", null); //Sets the messagebox values
             }
             else
             {
                 difficulty = listBoxlvlselect.SelectedIndex;
 
-                if (secondTimeRound == 0)
+                if (secondTimeRound == 0)//Disables the instructions screen for second time playing a round. So that it is not annoying the player
                 {
 
                     a.ShowDialog();
@@ -51,7 +51,7 @@ namespace PingPongChamps
         public string SetHighScore1
         {
          
-            set { lbllvl1num.Text = value; }
+            set { lbllvl1num.Text = value; }//Getter/setter for the text of the highscore lbls
         }
         public string SetHighScore2
         {
@@ -87,9 +87,9 @@ namespace PingPongChamps
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form b = new Instructions(null);
+            Form b = new Instructions(null); //Opens the instructions window, and hides the button to continue in order to prevent error.
             b.ShowDialog();
-            secondTimeRound++;
+            secondTimeRound++;//disables the instructions from showing up when play is pressed, even though not playing the game.
         }
     }
 }

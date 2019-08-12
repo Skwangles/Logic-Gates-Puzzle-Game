@@ -15,12 +15,12 @@ namespace PingPongChamps
 
         public override void ToggleLine(bool on, int wire)
         {
-            this.inputs[wire] = on;
+            this.inputs[wire] = on;//Sets the called wire to the boolean of the called wire below
             next.ToggleLine((inputs[0] && inputs[1]), outWireNum);
             if (inputs[0] & inputs[1])
             {
 
-                outputPb.BackgroundImage = Form1.WireImg[0];
+                outputPb.BackgroundImage = Form1.WireImg[0];//Changes wire image based on state
             }
             else
             {
