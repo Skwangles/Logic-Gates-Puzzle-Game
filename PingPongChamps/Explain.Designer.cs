@@ -53,7 +53,7 @@
             // lblOrGate
             // 
             this.lblOrGate.AutoSize = true;
-            this.lblOrGate.Location = new System.Drawing.Point(106, 156);
+            this.lblOrGate.Location = new System.Drawing.Point(115, 156);
             this.lblOrGate.Name = "lblOrGate";
             this.lblOrGate.Size = new System.Drawing.Size(156, 13);
             this.lblOrGate.TabIndex = 1;
@@ -73,7 +73,7 @@
             // lblAndGate
             // 
             this.lblAndGate.AutoSize = true;
-            this.lblAndGate.Location = new System.Drawing.Point(106, 190);
+            this.lblAndGate.Location = new System.Drawing.Point(115, 190);
             this.lblAndGate.Name = "lblAndGate";
             this.lblAndGate.Size = new System.Drawing.Size(167, 13);
             this.lblAndGate.TabIndex = 3;
@@ -83,7 +83,7 @@
             // lblNandGate
             // 
             this.lblNandGate.AutoSize = true;
-            this.lblNandGate.Location = new System.Drawing.Point(106, 231);
+            this.lblNandGate.Location = new System.Drawing.Point(115, 230);
             this.lblNandGate.Name = "lblNandGate";
             this.lblNandGate.Size = new System.Drawing.Size(181, 13);
             this.lblNandGate.TabIndex = 4;
@@ -93,7 +93,7 @@
             // lblNorGate
             // 
             this.lblNorGate.AutoSize = true;
-            this.lblNorGate.Location = new System.Drawing.Point(106, 271);
+            this.lblNorGate.Location = new System.Drawing.Point(115, 269);
             this.lblNorGate.Name = "lblNorGate";
             this.lblNorGate.Size = new System.Drawing.Size(158, 13);
             this.lblNorGate.TabIndex = 5;
@@ -102,7 +102,7 @@
             // lblXorGate
             // 
             this.lblXorGate.AutoSize = true;
-            this.lblXorGate.Location = new System.Drawing.Point(106, 310);
+            this.lblXorGate.Location = new System.Drawing.Point(115, 307);
             this.lblXorGate.Name = "lblXorGate";
             this.lblXorGate.Size = new System.Drawing.Size(161, 13);
             this.lblXorGate.TabIndex = 6;
@@ -111,7 +111,7 @@
             // lblXnorGate
             // 
             this.lblXnorGate.AutoSize = true;
-            this.lblXnorGate.Location = new System.Drawing.Point(106, 346);
+            this.lblXnorGate.Location = new System.Drawing.Point(115, 344);
             this.lblXnorGate.Name = "lblXnorGate";
             this.lblXnorGate.Size = new System.Drawing.Size(199, 26);
             this.lblXnorGate.TabIndex = 7;
