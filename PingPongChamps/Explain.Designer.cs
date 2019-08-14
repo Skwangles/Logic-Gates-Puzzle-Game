@@ -65,9 +65,10 @@
             this.lblGateNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGateNames.Location = new System.Drawing.Point(1, 136);
             this.lblGateNames.Name = "lblGateNames";
-            this.lblGateNames.Size = new System.Drawing.Size(99, 234);
+            this.lblGateNames.Size = new System.Drawing.Size(116, 234);
             this.lblGateNames.TabIndex = 2;
-            this.lblGateNames.Text = "Or\r\nAnd\r\nNand\r\nNor\r\nXor\r\nXnor\r\n";
+            this.lblGateNames.Text = "OR\r\nAND\r\nNAND\r\nNOR\r\nXOR\r\nXNOR\r\n";
+            this.lblGateNames.Click += new System.EventHandler(this.lblGateNames_Click);
             // 
             // lblAndGate
             // 

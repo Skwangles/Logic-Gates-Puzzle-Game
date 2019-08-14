@@ -41,5 +41,10 @@ namespace PingPongChamps
         {
 
         }
+
+        private void lblGateNames_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
