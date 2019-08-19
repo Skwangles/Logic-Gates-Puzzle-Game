@@ -64,7 +64,7 @@
             "Level 1 - Or, And.",
             "Level 2 - Nor, Nand.",
             "Level 3 - Xnor, Xor."});
-            this.listBoxlvlselect.Location = new System.Drawing.Point(135, 157);
+            this.listBoxlvlselect.Location = new System.Drawing.Point(135, 166);
             this.listBoxlvlselect.Name = "listBoxlvlselect";
             this.listBoxlvlselect.Size = new System.Drawing.Size(184, 79);
             this.listBoxlvlselect.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             this.lblDiffucltylbl.AutoSize = true;
             this.lblDiffucltylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiffucltylbl.Location = new System.Drawing.Point(180, 129);
+            this.lblDiffucltylbl.Location = new System.Drawing.Point(180, 138);
             this.lblDiffucltylbl.Name = "lblDiffucltylbl";
             this.lblDiffucltylbl.Size = new System.Drawing.Size(84, 25);
             this.lblDiffucltylbl.TabIndex = 2;
@@ -116,7 +116,7 @@
             this.lblhighscoretxt.AutoSize = true;
             this.lblhighscoretxt.BackColor = System.Drawing.Color.Transparent;
             this.lblhighscoretxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhighscoretxt.Location = new System.Drawing.Point(139, 239);
+            this.lblhighscoretxt.Location = new System.Drawing.Point(139, 248);
             this.lblhighscoretxt.Name = "lblhighscoretxt";
             this.lblhighscoretxt.Size = new System.Drawing.Size(180, 39);
             this.lblhighscoretxt.TabIndex = 5;
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PingPongChamps.Properties.Resources.Startgamebckgrnd;
+            this.BackgroundImage = global::PingPongChamps.Properties.Resources.Startgamebckgrndtxtadd;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(463, 440);
             this.Controls.Add(this.lblLvl3txt);
