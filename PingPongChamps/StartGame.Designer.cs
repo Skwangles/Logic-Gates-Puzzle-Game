@@ -45,6 +45,7 @@
             // 
             // btnStart
             // 
+            this.btnStart.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(185, 41);
             this.btnStart.Name = "btnStart";
@@ -101,6 +102,7 @@
             this.button1.BackColor = System.Drawing.Color.RosyBrown;
             this.button1.BackgroundImage = global::PingPongChamps.Properties.Resources.GameAim1;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Default;
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.Location = new System.Drawing.Point(372, 0);
             this.button1.Name = "button1";

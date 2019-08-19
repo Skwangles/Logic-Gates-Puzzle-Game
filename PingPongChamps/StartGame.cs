@@ -90,5 +90,23 @@ namespace PingPongChamps
             b.ShowDialog();
             secondTimeRound++;//disables the instructions from showing up when play is pressed, even though not playing the game.
         }
+
+        public void SetCursor()
+        {
+            int B = 0;
+            if(B == 0)
+            {
+                
+
+                B++;
+            }
+            else
+            {
+
+
+                B = 0;
+            }
+
+        }
     }
 }
