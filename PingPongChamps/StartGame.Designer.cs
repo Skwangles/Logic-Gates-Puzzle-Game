@@ -74,11 +74,11 @@
             // 
             this.lblDiffucltylbl.AutoSize = true;
             this.lblDiffucltylbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiffucltylbl.Location = new System.Drawing.Point(180, 138);
+            this.lblDiffucltylbl.Location = new System.Drawing.Point(168, 138);
             this.lblDiffucltylbl.Name = "lblDiffucltylbl";
-            this.lblDiffucltylbl.Size = new System.Drawing.Size(84, 25);
+            this.lblDiffucltylbl.Size = new System.Drawing.Size(119, 25);
             this.lblDiffucltylbl.TabIndex = 2;
-            this.lblDiffucltylbl.Text = "Difficulty";
+            this.lblDiffucltylbl.Text = "Level Select";
             this.lblDiffucltylbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnExplainsLGbtn
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::PingPongChamps.Properties.Resources.Startgamebckgrndtxtadd;
+            this.BackgroundImage = global::PingPongChamps.Properties.Resources.StartgamebckgrndExtraArrows;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(463, 440);
             this.Controls.Add(this.lblLvl3txt);

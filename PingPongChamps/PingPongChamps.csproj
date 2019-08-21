@@ -207,5 +207,8 @@
   <ItemGroup>
     <None Include="Resources\Startgamebckgrndtxtadd.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartgamebckgrndExtraArrows.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
